@@ -2,16 +2,10 @@ function loadLanguageFile(language) {
   const base = document.querySelector('meta[name="base-path"]')?.content || '.';
   return fetch(`${base}/locales/${language}.json`)
     .then((response) => response.json())
-    .catch((error) => console.error("Ошибка загрузки файла:", error));
+    .catch((error) => console.error("Error loading language file:", error));
 }
 
 function applyText(languageData) {
-  // const header = document.querySelector('h1');
-  // if (header) header.textContent = languageData.welcome;
-
-  // const paragraph = document.querySelector('p');
-  // if (paragraph) paragraph.textContent = languageData.test;
-
   const navHome = document.querySelector(".nav .home");
   if (navHome) navHome.textContent = languageData.home;
 
@@ -263,7 +257,6 @@ function applyText(languageData) {
   const blog2Author = document.querySelector("#blog2Author");
   if (blog2Author) blog2Author.textContent = languageData.blog2Author;
 
-
   // Founder
   const titleFounder = document.querySelector("#titleFounder");
   if (titleFounder) titleFounder.textContent = languageData.titleFounder;
@@ -279,8 +272,6 @@ function applyText(languageData) {
 
   const textFounder3 = document.querySelector("#textFounder3");
   if (textFounder3) textFounder3.innerHTML = languageData.textFounder3;
-
-
 }
 
 function changeLanguage(language) {
@@ -291,20 +282,26 @@ function changeLanguage(language) {
     applyText(languageData);
 
     if (language === "ka") {
+      document.documentElement.style.setProperty('--font-body', "'Noto Sans Georgian', sans-serif");
       document.body.style.fontFamily = "'Noto Sans Georgian', sans-serif";
     } else {
+      document.documentElement.style.setProperty('--font-body', "'Montserrat', sans-serif");
       document.body.style.fontFamily = "'Montserrat', sans-serif";
     }
   });
 }
 
-// При загрузке страницы проверяем язык из localStorage и применяем его
 document.addEventListener("DOMContentLoaded", () => {
-  const savedLanguage = localStorage.getItem("language") || "en"; // по умолчанию английский
+  const savedLanguage = localStorage.getItem("language") || "en";
   changeLanguage(savedLanguage);
 
+  // Set value on both desktop and mobile selectors
   const languageSelector = document.getElementById("languageSelector");
   if (languageSelector) {
     languageSelector.value = savedLanguage;
+  }
+  const languageSelectorMobile = document.getElementById("languageSelectorMobile");
+  if (languageSelectorMobile) {
+    languageSelectorMobile.value = savedLanguage;
   }
 });

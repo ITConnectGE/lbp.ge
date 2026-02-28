@@ -4,25 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="base-path" content="." />
+    <link rel="shortcut icon" href="./img/iconi.png" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="./css/global.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+Georgian:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <head>
-      <link rel="shortcut icon" href="./img/iconi.png" />
-    </head>
     <title>LBP - Legal & Business Partners</title>
   </head>
   <body>
-    <div class="cursor-shadow"></div>
     <header class="header">
       <div class="logo">
         <a href="#home">
           <img
             src="img/logo.png"
-            alt=""
+            alt="LBP Logo"
           />
         </a>
       </div>
@@ -66,9 +63,8 @@
         </li>
       </ul>
 
-      <!-- ენის გადამრთველი -->
       <div class="burder-content">
-        <select id="languageSelector" onchange="changeLanguage(this.value)">
+        <select id="languageSelectorMobile" onchange="changeLanguage(this.value)">
           <option value="en">En</option>
           <option value="ka">ქა</option>
         </select>
@@ -80,44 +76,38 @@
       </div>
     </header>
 
-    <div class="container">
-
-      <!-- მეტი ვიდრე იურიდიული ფირმა -->
-      <section id="home" class="start">
-        <div class="content">
-          <div class="info">
-            <h1 id="welcome" class="title"></h1>
-            <div class="text">
-              <p id="welcomeP">
-                
-              </p>
-              <div class="buttons">
-                <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@lbp.ge"
-                >
-                  <button id="contactBtn" type="" class="button">
-                    დაგვიკავშირდით
-                  </button>
-                </a>
-                <a href="#about">
-                  <button id="aboutBtn" class="button">ჩვენ შესახებ</button>
-                </a>
-              </div>
+    <!-- Hero -->
+    <section id="home" class="start">
+      <div class="content">
+        <div class="info">
+          <div class="gold-line"></div>
+          <h1 id="welcome" class="title"></h1>
+          <div class="text">
+            <p id="welcomeP"></p>
+            <div class="buttons">
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@lbp.ge"
+              >
+                <button id="contactBtn" type="" class="button button-primary">
+                  დაგვიკავშირდით
+                </button>
+              </a>
+              <a href="#about">
+                <button id="aboutBtn" class="button button-ghost">ჩვენ შესახებ</button>
+              </a>
             </div>
           </div>
-          <div class="img">
-            <img draggable="false" src="./img/team_1.png" />
-          </div>
         </div>
-      </section>
+        <div class="img">
+          <img draggable="false" src="./img/team_1.png" alt="LBP Team" />
+        </div>
+      </div>
+    </section>
 
+    <div class="container">
       <!-- about LBP -->
-      <section id="about" class="about">
-        <div class="title">
-          <img
-            src="./img/iconiblack.png"
-            alt=""
-          />
+      <section id="about" class="about reveal">
+        <div class="section-title">
           <h1 id="titleAbout">LBP-ს შესახებ</h1>
         </div>
         <div class="content">
@@ -130,16 +120,16 @@
 
           <img
             src="img/teams.jpg"
-            alt=""
+            alt="LBP Team"
+            loading="lazy"
           />
         </div>
       </section>
 
 
       <!-- Founder -->
-      <section id="founder" class="about">
-        <div class="title">
-          <img src="./img/iconiblack.png" alt="" />
+      <section id="founder" class="about reveal">
+        <div class="section-title">
           <h1 id="titleFounder"></h1>
         </div>
         <div class="content">
@@ -148,21 +138,13 @@
             <p id="textFounder1" class="text"></p>
           </div>
 
-          <img src="img/Giorgi-Shalamberidze.jpg" alt="Giorgi Shalamberidze" />
+          <img src="img/Giorgi-Shalamberidze.jpg" alt="Giorgi Shalamberidze" loading="lazy" />
         </div>
       </section>
 
 
-
-
-
-
       <section id="team" class="team" style="display: none;">
-        <div class="title">
-          <img
-            src="img/iconiblack.png"
-            alt=""
-          />
+        <div class="section-title">
           <h1 id="titleTeam">ჩვენი გუნდი</h1>
         </div>
         <ul class="cards">
@@ -171,6 +153,7 @@
               <img
                 draggable="false"
                 src="img/team_1.png"
+                loading="lazy"
               />
               <h1 id="personG">გიორგი შალამბერიძე</h1>
               <h4 id="statusLeader">მმართველი პარტნიორი</h4>
@@ -180,16 +163,12 @@
       </section>
 
 
-      <section id="services" class="services">
-        <div class="title">
-          <img
-            src="img/iconiblack.png"
-            alt=""
-          />
+      <section id="services" class="services reveal">
+        <div class="section-title">
           <h1 id="titleServices">Practice Areas</h1>
         </div>
         <ul class="list">
-          <li class="card">
+          <li class="card reveal-child">
             <ul>
               <li>
                 <h6 id="listType1" class="stroke">Administrative Law</h6>
@@ -210,7 +189,7 @@
               </li>
             </ul>
           </li>
-          <li class="card">
+          <li class="card reveal-child">
             <ul>
               <li>
                 <h6 id="listType6" class="stroke">Crypto and Digital Assets</h6>
@@ -231,7 +210,7 @@
               </li>
             </ul>
           </li>
-          <li class="card">
+          <li class="card reveal-child">
             <ul>
               <li>
                 <h6 id="listType11" class="stroke">
@@ -258,12 +237,8 @@
       </section>
 
 
-      <section class="map">
-        <div class="title">
-          <img
-            src="img/iconiblack.png"
-            alt=""
-          />
+      <section class="map reveal">
+        <div class="section-title">
           <h1 id="titleLocation" class="titleLocation">we are here</h1>
         </div>
         <div class="content">
@@ -274,19 +249,15 @@
                 37m Ilia Chavchavadze Avenue, Tbilisi 0179, 5 этаж.
               </p>
             </div>
-            <img src="img/mapPhoto.jpg" alt="" />
+            <img src="img/mapPhoto.jpg" alt="Office" loading="lazy" />
           </div>
           <div id="map" style="width: 100%; height: 500px"></div>
         </div>
       </section>
 
 
-      <section id="careers" class="careers">
-        <div class="title">
-          <img
-            src="img/iconiblack.png"
-            alt=""
-          />
+      <section id="careers" class="careers reveal">
+        <div class="section-title">
           <h1 id="titleCareers">Careers</h1>
         </div>
         <div class="text">
@@ -297,80 +268,15 @@
           </p>
           <p id="careersP2">
             თუკი მიგაჩნიათ, რომ ჩვენი იურიდიული ფირმა გაინტერესებთ, გთხოვთ
-            გამოაგზავნოთ თქვენი რეზიუმე და სამოტივაციო წერილი info@lbp.ge-ზე.
+            გამოაგზავნოთ თქვენი რეზიუმე და სამოტივაციო წერილი <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@lbp.ge" class="gold-link">info@lbp.ge</a>-ზე.
           </p>
         </div>
       </section>
-
-
-		  <footer class="footer">
-			<div class="logo">
-			  <img src="./img/iconi.png" alt="" />
-			</div>
-			<ul class="contact">
-			  <li>
-				 <label for=""
-					><h4 id="gmail"></h4>
-					<a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@lbp.ge"
-					  >info@lbp.ge</a
-					>
-				 </label>
-			  </li>
-			  <li>
-				 <label for="">
-					<h4 id="phone">ტელეფონი:</h4>
-					<a href="tel:+995595223333">+995-595-223-333</a>
-				 </label>
-			  </li>
-			</ul>
-			<ul class="contact-mb">
-			  <li>
-				 <a href="https://mail.google.com/mail/u/0/?fs=1&to=info@lbp.ge&tf=cm">
-					<img src="./img/gmail.svg" alt=""
-				 /></a>
-			  </li>
-			  <li>
-				 <a href="tel:+995595223333">
-					<img src="./img/phone.svg" alt="" />
-					<img src="./img/georgia.svg" alt="" class="flag"
-				 /></a>
-			  </li>
-			</ul>
-			<ul class="social">
-			  <li class="gmail">
-				 <a href="https://mail.google.com/mail/u/0/?fs=1&to=info@lbp.ge&tf=cm">
-					<img src="./img/gmail.svg" alt=""
-				 /></a>
-			  </li>
-			  <li>
-				 <a href="https://wa.me/12023912609">
-					<img src="./img/whatsapp.svg" alt=""
-				 /></a>
-			  </li>
-			  <li>
-				 <a href="https://t.me/FCCC27">
-					<img src="./img/telegram.svg" alt="" />
-				 </a>
-			  </li>
-			  <li>
-				 <a
-					href="https://www.linkedin.com/company/lbp-law-office/?viewAsMember=true"
-				 >
-					<img src="./img/linked.svg" alt="" />
-				 </a>
-			  </li>
-			  <li>
-				 <a href="https://www.facebook.com/LBPLawOffice">
-					<img src="./img/facebook.svg" alt="" />
-				 </a>
-			  </li>
-			</ul>
-		  </footer>
     </div>
 
     <footer class="footer">
       <div class="logo">
-        <img src="./img/iconi.png" alt="" />
+        <img src="./img/iconi.png" alt="LBP" />
       </div>
       <ul class="contact">
         <li>
@@ -383,7 +289,7 @@
         </li>
         <li>
           <label for="">
-            <h4 id="phone2">ტელეფონი:</h4>
+            <h4 id="phone">ტელეფონი:</h4>
             <a href="tel:+995595223333">+995-595-223-333</a>
           </label>
         </li>
@@ -391,12 +297,12 @@
       <ul class="contact-mb">
         <li>
           <a href="https://mail.google.com/mail/u/0/?fs=1&to=info@lbp.ge&tf=cm">
-            <img src="./img/gmail.svg" alt=""
+            <img src="./img/gmail.svg" alt="Email"
           /></a>
         </li>
         <li>
           <a href="tel:+995595223333">
-            <img src="./img/phone.svg" alt="" />
+            <img src="./img/phone.svg" alt="Phone" />
             <img src="./img/georgia.svg" alt="" class="flag"
           /></a>
         </li>
@@ -404,36 +310,75 @@
       <ul class="social">
         <li class="gmail">
           <a href="https://mail.google.com/mail/u/0/?fs=1&to=info@lbp.ge&tf=cm">
-            <img src="./img/gmail.svg" alt=""
+            <img src="./img/gmail.svg" alt="Email"
           /></a>
         </li>
         <li>
           <a href="https://wa.me/12023912609">
-            <img src="./img/whatsapp.svg" alt=""
+            <img src="./img/whatsapp.svg" alt="WhatsApp"
           /></a>
         </li>
         <li>
           <a href="https://t.me/FCCC27">
-            <img src="./img/telegram.svg" alt="" />
+            <img src="./img/telegram.svg" alt="Telegram" />
           </a>
         </li>
         <li>
           <a
             href="https://www.linkedin.com/company/lbp-law-office/?viewAsMember=true"
           >
-            <img src="./img/linked.svg" alt="" />
+            <img src="./img/linked.svg" alt="LinkedIn" />
           </a>
         </li>
         <li>
           <a href="https://www.facebook.com/LBPLawOffice">
-            <img src="./img/facebook.svg" alt="" />
+            <img src="./img/facebook.svg" alt="Facebook" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <footer class="footer-mobile">
+      <ul class="contact-mb">
+        <li>
+          <a href="https://mail.google.com/mail/u/0/?fs=1&to=info@lbp.ge&tf=cm">
+            <img src="./img/gmail.svg" alt="Email"
+          /></a>
+        </li>
+        <li>
+          <a href="tel:+995595223333">
+            <img src="./img/phone.svg" alt="Phone" />
+            <img src="./img/georgia.svg" alt="" class="flag"
+          /></a>
+        </li>
+      </ul>
+      <ul class="social">
+        <li>
+          <a href="https://wa.me/12023912609">
+            <img src="./img/whatsapp.svg" alt="WhatsApp"
+          /></a>
+        </li>
+        <li>
+          <a href="https://t.me/FCCC27">
+            <img src="./img/telegram.svg" alt="Telegram" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/company/lbp-law-office/?viewAsMember=true"
+          >
+            <img src="./img/linked.svg" alt="LinkedIn" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/LBPLawOffice">
+            <img src="./img/facebook.svg" alt="Facebook" />
           </a>
         </li>
       </ul>
     </footer>
 
     <script src="./scripts/lang.js"></script>
-    <script src="./scripts/cursor.js"></script>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/map.js"></script>
   </body>
