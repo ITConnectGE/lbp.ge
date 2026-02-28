@@ -257,6 +257,50 @@ function applyText(languageData) {
   const blog2Author = document.querySelector("#blog2Author");
   if (blog2Author) blog2Author.textContent = languageData.blog2Author;
 
+  // Contact nav
+  const navContactLink = document.querySelector(".nav .contact");
+  if (navContactLink) navContactLink.textContent = languageData.contact;
+
+  // Footer
+  const footerAbout = document.querySelector("#footerAbout");
+  if (footerAbout) footerAbout.textContent = languageData.footerAbout;
+  const footerQuickLinks = document.querySelector("#footerQuickLinks");
+  if (footerQuickLinks) footerQuickLinks.textContent = languageData.footerQuickLinks;
+  const footerLinkAbout = document.querySelector("#footerLinkAbout");
+  if (footerLinkAbout) footerLinkAbout.textContent = languageData.footerLinkAbout;
+  const footerLinkFounder = document.querySelector("#footerLinkFounder");
+  if (footerLinkFounder) footerLinkFounder.textContent = languageData.footerLinkFounder;
+  const footerLinkServices = document.querySelector("#footerLinkServices");
+  if (footerLinkServices) footerLinkServices.textContent = languageData.footerLinkServices;
+  const footerLinkCareers = document.querySelector("#footerLinkCareers");
+  if (footerLinkCareers) footerLinkCareers.textContent = languageData.footerLinkCareers;
+  const footerLinkLocation = document.querySelector("#footerLinkLocation");
+  if (footerLinkLocation) footerLinkLocation.textContent = languageData.footerLinkLocation;
+  const footerBlogHeading = document.querySelector("#footerBlogHeading");
+  if (footerBlogHeading) footerBlogHeading.textContent = languageData.footerBlogHeading;
+  const footerContactHeading = document.querySelector("#footerContactHeading");
+  if (footerContactHeading) footerContactHeading.textContent = languageData.footerContactHeading;
+  const footerAddress = document.querySelector("#footerAddress");
+  if (footerAddress) footerAddress.textContent = languageData.footerAddress;
+
+  // Contact page
+  const contactPageTitle = document.querySelector("#contactPageTitle");
+  if (contactPageTitle) contactPageTitle.textContent = languageData.contactPageTitle;
+  const contactPageSubtitle = document.querySelector("#contactPageSubtitle");
+  if (contactPageSubtitle) contactPageSubtitle.textContent = languageData.contactPageSubtitle;
+  const contactPageEmail = document.querySelector("#contactPageEmail");
+  if (contactPageEmail) contactPageEmail.textContent = languageData.contactPageEmail;
+  const contactPagePhone = document.querySelector("#contactPagePhone");
+  if (contactPagePhone) contactPagePhone.textContent = languageData.contactPagePhone;
+  const contactPageAddress = document.querySelector("#contactPageAddress");
+  if (contactPageAddress) contactPageAddress.textContent = languageData.contactPageAddress;
+  const contactPageAddressValue = document.querySelector("#contactPageAddressValue");
+  if (contactPageAddressValue) contactPageAddressValue.textContent = languageData.contactPageAddressValue;
+  const contactPageCTA = document.querySelector("#contactPageCTA");
+  if (contactPageCTA) contactPageCTA.textContent = languageData.contactPageCTA;
+  const contactPageMapTitle = document.querySelector("#contactPageMapTitle");
+  if (contactPageMapTitle) contactPageMapTitle.textContent = languageData.contactPageMapTitle;
+
   // Founder
   const titleFounder = document.querySelector("#titleFounder");
   if (titleFounder) titleFounder.textContent = languageData.titleFounder;

@@ -106,7 +106,7 @@ Answering: Transactions using virtual assets are prohibited in Georgia, except f
   </div>
 </div>`;
 });
-blog3.addEventListener("click", () => {
+blog3?.addEventListener("click", () => {
   if (window.innerWidth <= 1320) {
     blogList.style.display = "none";
   }
@@ -188,7 +188,7 @@ Answering: Transactions using virtual assets are prohibited in Georgia, except f
   </div>
 </div>`;
 });
-blog4.addEventListener("click", () => {
+blog4?.addEventListener("click", () => {
   if (window.innerWidth <= 1320) {
     blogList.style.display = "none";
   }
