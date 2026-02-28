@@ -1,0 +1,279 @@
+@import "reset.scss";
+@import "header.scss";
+@import "start.scss";
+@import "team.scss";
+@import "about.scss";
+@import "services.scss";
+@import "person.scss";
+@import "careers.scss";
+@import "map.scss";
+@import "blog.scss";
+@import "footer.scss";
+
+:root {
+  --font-noto-sans-georgian: "Noto Sans Georgian", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+header,footer{
+	touch-action: none;
+	overscroll-behavior: none;
+	-webkit-overflow-scrolling: touch;
+	overflow: hidden;
+}
+
+.title {
+  word-spacing: -2px;
+  @media (min-width: 1080px) {
+    font-size: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 20px;
+    h1 {
+      font-size: 50px;
+    }
+    img {
+      width: 50px;
+    }
+  }
+  @media (max-width: 1080px) {
+    font-size: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 20px;
+    h1 {
+      font-size: 20px;
+    }
+    img {
+      width: 50px;
+    }
+  }
+  @media (max-width: 620px) {
+    font-size: 15px;
+    gap: 5px;
+    h1 {
+      font-size: 20px;
+    }
+    img {
+      width: 30px;
+    }
+  }
+}
+
+.title::before,
+.title::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  border-radius: 50px;
+  background: linear-gradient(to top right, #000, rgba(0, 0, 0, 0.9));
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  margin: 0 10px;
+}
+
+section {
+  margin: 50px 0px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #32578b;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+body {
+  color: #0a0a0a;
+  background: #f5f3ff;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow-y: hidden;
+  touch-action: manipulation;
+}
+
+.container {
+  width: 100%;
+  padding: 50px;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  overflow-x: hidden;
+	touch-action: auto;
+  max-height: calc(100vh - 180px); 
+  box-sizing: border-box; /* Учитываем отступы в расчете ширины */
+  @media (max-width: 920px) {
+    padding: 20px;
+  }
+  .footer{
+	display: none;
+  }
+  @media (max-width: 851px) {
+    max-height: calc(100vh - 80px);
+	 padding-bottom: 100px;
+	 .footer{
+		z-index: 900;
+		height: 80px + env(safe-area-inset-bottom) !important;
+		display: flex;
+		width: 100vw;
+		position: fixed;
+		padding-top: 10px;
+		bottom: -10px;
+		left: 0;
+	  }
+  }
+
+}
+
+/* Стиль для всего скроллбара */
+::-webkit-scrollbar {
+  width: 12px; /* Ширина вертикального скроллбара */
+  height: 12px; /* Высота горизонтального скроллбара */
+	
+}
+
+/* Стиль для "ползунка" скроллбара */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top right, #000, rgba(0, 0, 0, 0.9));
+  border-radius: 10px;
+  border: 3px solid #fff;
+  transition: background 0.3s ease;
+}
+
+/* Стиль для фона скроллбара */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Цвет фона (track) */
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444; /* Тёмный оттенок для эффекта наведения */
+}
+
+::selection {
+  background: #0a0a0a;
+  color: #ffffff; /* Белый цвет текста для контраста */
+}
+
+/* Тень для курсора */
+.cursor-shadow {
+  position: fixed;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 1001;
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.4);
+  opacity: 0; /* Тень скрыта по умолчанию */
+  transition: box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+/* При наведении на нужные элементы тень становится ярче */
+.header:hover ~ .cursor-shadow,
+.footer:hover ~ .cursor-shadow,
+.card:hover ~ .cursor-shadow {
+  opacity: 1; /* Показываем тень только при наведении */
+  box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.6);
+}
+
+select {
+  appearance: none;
+  background-color: #1b1b1b; /* Графитовый фон */
+  color: #ffffff;
+  padding: 5px;
+  border: 1px solid #2e2e2e;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Тень и выделение при фокусе */
+select:focus,
+select:hover {
+  outline: none;
+  border-color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+/* Стиль для опций */
+option {
+  background-color: #1b1b1b; /* Графитовый фон */
+  color: #ffffff;
+  padding: 10px;
+}
+
+/* Цвет выделения опций при наведении */
+option:hover {
+  background-color: #333333; /* Темнее для выделения */
+}
+
+/* Указатель для select */
+.select-container::after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.button {
+  padding: 20px;
+  border-radius: 30px;
+  background: transparent;
+  background-color: #1b1b1b; /* Графитовый фон */
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #0a0a0a;
+  transition: 0.3s ease;
+  @media (max-width: 620px) {
+    padding: 15px;
+    font-size: 15px;
+  }
+  @media (max-width: 420px) {
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 10px;
+  }
+}
+
+.button:hover {
+  background-color: #32578b;
+  border: 1px solid #fff;
+  transition: 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}

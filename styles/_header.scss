@@ -1,0 +1,131 @@
+/* Основные стили для header */
+.header {
+  background: linear-gradient(to top right, #000, rgba(0, 0, 0, 0.9));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  color: #fff;
+  z-index: 1000;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  @media (min-width: 950px) {
+    padding: 20px 50px;
+  }
+  height: 80px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .item-container {
+    pointer-events: auto;
+  }
+}
+.logo {
+  img {
+    height: 40px;
+  }
+}
+
+/* Скрываем меню на мобильных устройствах */
+.nav {
+  transition: transform 0.4s ease;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+
+/* Изначально скрытое состояние меню */
+@media (max-width: 920px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.95);
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    li {
+      margin-top: 30px;
+      .dekstop-selector {
+        display: none;
+      }
+    }
+  }
+  .burder-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    #languageSelector {
+      font-size: 10px;
+    }
+  }
+
+  .nav.open {
+    transform: translateX(0);
+  }
+
+  /* Прячем текстовое меню на экранах меньше 920px */
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+  }
+}
+
+/* Бургер-кнопка */
+.burder-content {
+  display: none;
+}
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Отображаем бургер-кнопку на мобильных */
+@media (max-width: 920px) {
+  .burger {
+    display: flex;
+  }
+  .burder-content {
+    display: flex;
+  }
+}
+
+/* Анимация бургер-кнопки в крестик */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}

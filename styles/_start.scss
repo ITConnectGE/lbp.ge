@@ -1,0 +1,218 @@
+$card-bg-color: #000; // Черный цвет фона
+$card-text-color: white;
+$card-hover-scale: 1.1;
+$card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+$card-duration: 0.3s;
+
+.start {
+  .content {
+    .title {
+      word-spacing: 0px !important;
+    }
+    .title::after,
+    .title::before {
+      display: none;
+    }
+    justify-content: center;
+    background: linear-gradient(to top right, #000, rgba(0, 0, 0, 0.9));
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+    min-height: 70vh; // Заменили height на min-height для гибкости
+    color: $card-text-color;
+    padding: 100px;
+    border-radius: 50px;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    .buttons {
+      display: flex;
+      align-items: center;
+      a::after {
+        display: none;
+      }
+    }
+    .img {
+      position: relative;
+      width: 50%;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+
+        position: absolute;
+        left: 50px;
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        border-radius: 50px 50px 0 0 !important;
+        user-select: none;
+      }
+    }
+
+    .info {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      line-height: 1.6;
+      font-size: 25px;
+      .buttons {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0 20px;
+
+    .content {
+      padding: 50px;
+      min-height: auto;
+      border-radius: 30px;
+      gap: 20px;
+      .img {
+        width: 70vh !important;
+
+        img {
+          height: 60vh !important;
+          position: relative;
+          border-radius: 20px 20px 0 0 !important;
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+      }
+
+      .info {
+        width: 40%;
+        gap: 30px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 40px !important;
+    .content {
+      .img {
+        img {
+          height: 40vh !important;
+        }
+      }
+    }
+    .info {
+      font-size: 20px !important;
+    }
+  }
+
+  @media (min-width: 1301px) {
+    margin: 0 20px;
+
+    .content {
+      padding: 50px;
+      min-height: auto;
+      border-radius: 30px;
+      gap: 20px;
+      .img {
+        width: 50%;
+
+        img {
+          height: 50vh !important;
+          position: relative;
+          bottom: -32px !important;
+          border-radius: 20px 20px 0 0 !important;
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+      }
+
+      .info {
+        gap: 30px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  @media (min-width: 1555px) {
+    .content {
+      justify-content: center;
+      gap: 150px;
+      .img {
+        img {
+          bottom: -32px !important;
+        }
+      }
+    }
+    .info {
+      width: 30vw !important;
+    }
+  }
+  @media (max-width: 1300px) {
+    margin: 0px !important;
+
+    .content {
+      padding: 50px;
+      min-height: auto;
+      border-radius: 30px;
+      flex-direction: column;
+      align-items: center;
+
+      .img {
+        width: 100%;
+
+        img {
+          position: relative;
+          border-radius: 20px 20px 0 0;
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+      }
+
+      .info {
+        width: 100%;
+        gap: 30px;
+        text-align: center;
+      }
+    }
+  }
+  @media (min-width: 320px) and (max-width: 1080px) {
+    .content {
+      .title {
+        font-size: 30px;
+      }
+    }
+  }
+
+  // Адаптация для экранов 600px и ниже
+  @media (min-width: 320px) {
+    .content {
+      width: 100%;
+      padding: 30px;
+      border-radius: 15px;
+      font-size: 0.9rem;
+      .info {
+        .text {
+          font-size: 20px;
+        }
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+      }
+      .img {
+        img {
+          width: 100%;
+          height: 25vh;
+          border-radius: 15px 15px 0 0 !important;
+
+          left: 0px;
+          bottom: -30px;
+        }
+      }
+
+      .info {
+        gap: 20px;
+        font-size: 13px;
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+.person {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .title {
+    margin: 0px;
+    font-size: 30px;
+  }
+  @media (max-width: 768px) {
+    .title {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+    .info {
+      .buttons {
+        .button {
+          padding: 15px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    flex-wrap: nowrap;
+    gap: 20px;
+    .title {
+      font-size: 20px;
+    }
+    .photo {
+      max-width: 400px;
+    }
+    .info {
+      max-width: 400px !important;
+      .text {
+        overflow-y: scroll !important;
+        height: 50vh;
+      }
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 920px) {
+    p {
+      font-size: 18px;
+    }
+  }
+  @media (min-width: 1200px) {
+    gap: 50px;
+    .photo {
+      width: 100%;
+      max-width: 500px;
+    }
+    .info {
+      max-width: 800px !important;
+      .text {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+    .title {
+      font-size: 25px;
+    }
+  }
+  @media (min-width: 1350px) {
+    .title {
+      font-size: 30px;
+    }
+    .info {
+      .text {
+        p {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  .photo {
+    img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 30px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+      /* Анимация для фото */
+      animation: fadeIn 1s ease-out;
+    }
+  }
+
+  .info {
+    width: 100%;
+    max-width: 800px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* Анимация для блока .info */
+    animation: fadeIn 1s ease-out;
+    animation-delay: 0s; /* Старт одновременно с фото */
+    opacity: 0; /* Скрытие до появления */
+    animation-fill-mode: forwards; /* Сохранение конечного состояния анимации */
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      /* Анимация для текстовых блоков */
+      div {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeUp 0.6s ease-out;
+        animation-fill-mode: forwards;
+      }
+
+      /* Плавное появление по очереди */
+      div:nth-child(1) {
+        animation-delay: 0.3s; /* Подстраиваем под общий тайминг */
+      }
+      div:nth-child(2) {
+        animation-delay: 0.5s;
+      }
+      div:nth-child(3) {
+        animation-delay: 0.7s;
+      }
+    }
+  }
+}
+
+/* Анимация для появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Анимация для появления с перемещением вверх */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

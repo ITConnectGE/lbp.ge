@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saba Kevkhishvili - LBP</title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+Georgian:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="cursor-shadow"></div>
+    <header class="header">
+      <div class="logo">
+        <a href="/">
+          <img
+            src="https://lbp.ge/wp-content/uploads/2023/09/LBP_white.png"
+            alt=""
+          />
+        </a>
+      </div>
+      <ul class="nav">
+        <li>
+          <select
+            id="languageSelector"
+            class="dekstop-selector"
+            onchange="changeLanguage(this.value)"
+          >
+            <option value="en">En</option>
+            <option value="ka">ქა</option>
+          </select>
+        </li>
+        <a href="/#home" class="item home">Home</a>
+        <a href="/#team" class="item team">Team</a>
+        <a href="/#about" class="item about">About</a>
+        <a href="/#services" class="item services"
+          >Practice Areas & Industries</a
+        >
+      </ul>
+      <div class="burder-content">
+        <select id="languageSelector" onchange="changeLanguage(this.value)">
+          <option value="en">En</option>
+          <option value="ka">ქა</option>
+        </select>
+        <div class="burger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="person">
+        <div class="photo">
+          <img
+            src="https://lbp.ge/wp-content/uploads/2023/09/team_2.png"
+            alt=""
+          />
+        </div>
+        <div class="info">
+          <h1 id="personS" class="title">საბა ქევხიშვილი</h1>
+          <div class="text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptates cupiditate corrupti tempora blanditiis quos, eaque
+              mollitia repellat, quidem nostrum sit, expedita officiis a
+              excepturi delectus totam. Illum at ullam pariatur delectus
+              similique quisquam et sapiente id labore iure ut quibusdam, aut
+              dicta amet enim, nesciunt inventore! Omnis accusamus debitis illo?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptates cupiditate corrupti tempora blanditiis quos, eaque
+              mollitia repellat, quidem nostrum sit, expedita officiis a
+              excepturi delectus totam. Illum at ullam pariatur delectus
+              similique quisquam et sapiente id labore iure ut quibusdam, aut
+              dicta amet enim, nesciunt inventore! Omnis accusamus debitis illo?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptates cupiditate corrupti tempora blanditiis quos, eaque
+              mollitia repellat, quidem nostrum sit, expedita officiis a
+              excepturi delectus totam. Illum at ullam pariatur delectus
+              similique quisquam et sapiente id labore iure ut quibusdam, aut
+              dicta amet enim, nesciunt inventore! Omnis accusamus debitis illo?
+            </p>
+          </div>
+          <div class="buttons">
+            <button class="button">call me</button
+            ><button class="button">write me</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="logo">
+        <img src="http://lbp.ge/wp-content/uploads/2023/09/iconi.png" alt="" />
+      </div>
+      <ul class="contact">
+        <li>
+          <label for=""
+            ><h4 id="gmail"></h4>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@lbp.ge"
+              >info@lbp.ge</a
+            >
+          </label>
+        </li>
+        <li>
+          <label for="">
+            <h4 id="phone">ტელეფონი:</h4>
+            <a href="tel:+995595432894">+995-595-432-894</a>
+            <a href="tel:+12023912609">+1-(202)-391-2609</a>
+          </label>
+        </li>
+      </ul>
+      <ul class="contact-mb">
+        <li>
+          <a href="#home"> <img src="/img/gmail.svg" alt="" /></a>
+        </li>
+        <li>
+          <a href="tel:+995595432894">
+            <img src="/img/phone.svg" alt="" />
+            <img src="/img/georgia.svg" alt="" class="flag"
+          /></a>
+        </li>
+        <li>
+          <a href="tel:+12023912609">
+            <img src="/img/phone.svg" alt="" />
+            <img src="/img/canada.svg" alt="" class="flag" />
+          </a>
+        </li>
+      </ul>
+      <ul class="social">
+        <li><img src="/img/facebook.svg" alt="" /></li>
+        <li><img src="/img/telegram.svg" alt="" /></li>
+        <li><img src="/img/linked.svg" alt="" /></li>
+        <li><img src="/img/whatsapp.svg" alt="" /></li>
+      </ul>
+    </footer>
+    <script src="/scripts/lang.js"></script>
+    <script src="/scripts/cursor.js"></script>
+    <script src="/scripts/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+.blog {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  @media (max-width: 1320px) {
+    flex-direction: column;
+    .list {
+      display: none !important;
+      z-index: 500;
+    }
+    .burgerList {
+      width: 50px;
+      position: fixed;
+      padding: 5px;
+      right: 20px;
+      margin-top: -60px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5) !important;
+      border-radius: 5px;
+      z-index: 700;
+      background: #fff;
+    }
+    .list {
+      margin-right: 20px;
+      width: 100% !important;
+    }
+    .content {
+      width: 100% !important;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5) !important;
+      padding: 20px;
+      .items {
+        .item {
+          span {
+            margin-left: 20px;
+            img {
+              display: none;
+            }
+          }
+        }
+      }
+      .author {
+        width: 100% !important;
+        padding: 0px !important;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .content {
+      padding: 10px !important;
+      .author {
+        width: 80vw !important;
+		  padding: 5px !important;
+      }
+    }
+
+    .nav {
+      display: none !important;
+    }
+  }
+  @media (min-width: 1320px) {
+    .burgerList {
+      display: none;
+    }
+  }
+
+  .list {
+    position: sticky;
+    height: max-content;
+    width: max-content;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 300px;
+    top: 0;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    z-index: 500;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    li {
+      font-weight: 600;
+      border-bottom: 1px solid gainsboro;
+      padding-bottom: 10px;
+      border-radius: 20px;
+      max-width: 300px;
+      img {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+      }
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      button {
+        background: transparent;
+        border: transparent;
+        cursor: pointer;
+      }
+      .active {
+        color: #32578b;
+      }
+      padding: 20px;
+      transition: 0.3s ease all;
+    }
+    li:hover {
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      transition: 0.3s ease all;
+      background: #1b1b1b;
+      border-bottom: 1px solid transparent;
+
+      button {
+        color: #91add4 !important;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    .nav {
+      display: flex;
+		flex-wrap:wrap;
+      align-items: start;
+      a {
+        text-align: center;
+
+        width: max-content;
+        color: #32578b !important;
+      }
+    }
+    .user {
+      margin: 0px !important;
+      width: max-content;
+    }
+    .author {
+      transition: 0.3s ease;
+      font-weight: 500;
+      color: #1b1b1b;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+      border-radius: 20px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+    .author:hover {
+      background-color: #1b1b1b;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      color: #fff;
+      transition: 0.3s ease;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 20px;
+
+      h1 {
+        margin: 0 auto;
+      }
+      a::after {
+        display: none;
+      }
+      a {
+        margin: 0 auto;
+      }
+    }
+
+    h1 {
+      font-weight: 500;
+    }
+    .button {
+      width: 200px;
+      margin: 0 auto;
+    }
+    .data {
+      font-weight: 500;
+      color: gray;
+    }
+    .nav {
+      a {
+        color: #000;
+      }
+    }
+    .items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+		  ul{
+			li{
+				.subject{
+					font-size: 24px;
+				}
+			}
+		  }
+        .subject {
+          font-weight: 500;
+          font-size: 25px;
+        }
+        .text {
+          span {
+            display: flex;
+            align-items: center;
+
+            img {
+              width: 50px;
+              height: 40px;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

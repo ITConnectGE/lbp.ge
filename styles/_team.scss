@@ -1,0 +1,68 @@
+$card-bg-color: #000; // Черный цвет фона
+$card-text-color: white;
+$card-hover-scale: 1.1;
+$card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+$card-duration: 0.3s;
+
+.team {
+  .cards {
+    @media (max-width: 920px) {
+      padding: 50px 0px;
+    }
+    padding: 100px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  .card {
+    cursor: pointer;
+    background: linear-gradient(to top right, #000, rgba(0, 0, 0, 0.9));
+    color: $card-text-color;
+    width: 350px;
+    height: max-content;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    box-shadow: $card-shadow;
+    transition: transform $card-duration ease, box-shadow $card-duration ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1 {
+      padding-top: 20px;
+      transition: text-shadow 0.3s ease; /* Плавный переход для текста */
+    }
+
+    img {
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход для картинки */
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      margin: 15px 0 10px;
+    }
+
+    p {
+      font-size: 1em;
+      margin: 0;
+    }
+
+    /* Hover эффект */
+    &:hover {
+      transform: scale($card-hover-scale); /* Увеличение */
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5); /* Более яркая тень при наведении */
+    }
+
+    &:hover img {
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Очень мягкая подсветка картинки */
+    }
+  }
+}

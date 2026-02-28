@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/global.css?v6" />
+    <link rel="stylesheet" href="./css/global.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+Georgian:wght@400;700&display=swap"
       rel="stylesheet"
@@ -24,7 +24,6 @@
           />
         </a>
       </div>
-
       <ul class="nav">
         <li class="item-container">
           <a href="#home" class="item home">Home</a>
@@ -33,9 +32,6 @@
           <a href="#about" class="item about">About</a>
         </li>
         <li class="item-container">
-          <a href="#founder" class="item founder">Founder</a>
-        </li>
-        <li class="item-container" style="display: none;">
           <a href="#team" class="item team">Team</a>
         </li>
         <li class="item-container">
@@ -63,8 +59,6 @@
           </select>
         </li>
       </ul>
-
-      <!-- ენის გადამრთველი -->
       <div class="burder-content">
         <select id="languageSelector" onchange="changeLanguage(this.value)">
           <option value="en">En</option>
@@ -79,15 +73,13 @@
     </header>
 
     <div class="container">
-
-      <!-- მეტი ვიდრე იურიდიული ფირმა -->
       <section id="home" class="start">
         <div class="content">
           <div class="info">
-            <h1 id="welcome" class="title"></h1>
+            <h1 id="welcome" class="title">ჩვენ ვაგვარებთ თქვენ პრობლემებს</h1>
             <div class="text">
               <p id="welcomeP">
-                
+                LBP უზრუნველყოფს თქვენი ბიზნესის მაქსიმალურ ზრდასა
               </p>
               <div class="buttons">
                 <a
@@ -108,8 +100,6 @@
           </div>
         </div>
       </section>
-
-      <!-- about LBP -->
       <section id="about" class="about">
         <div class="title">
           <img
@@ -120,7 +110,7 @@
         </div>
         <div class="content">
           <div class="info">
-            <h4 id="subjectAbout"></h4>
+            <h4 id="subjectAbout">ჩვენ ვაგვარებთ თქვენ პრობლემებს</h4>
             <p id="textAbout1" class="text"></p>
             <p id="textAbout2" class="text"></p>
             <p id="textAbout3" class="text"></p>
@@ -132,30 +122,7 @@
           />
         </div>
       </section>
-
-
-      <!-- Founder -->
-      <section id="founder" class="about">
-        <div class="title">
-          <img src="/img/iconiblack.png" alt="" />
-          <h1 id="titleFounder"></h1>
-        </div>
-        <div class="content">
-          <div class="info">
-            <h4 id="subjectFounder"></h4>
-            <p id="textFounder1" class="text"></p>
-          </div>
-
-          <img src="img/Giorgi-Shalamberidze.jpg" alt="Giorgi Shalamberidze" />
-        </div>
-      </section>
-
-
-
-
-
-
-      <section id="team" class="team" style="display: none;">
+      <section id="team" class="team">
         <div class="title">
           <img
             src="img/iconiblack.png"
@@ -174,10 +141,28 @@
               <h4 id="statusLeader">მმართველი პარტნიორი</h4>
             </a>
           </li>
+          <li class="card">
+            <a href="#">
+              <img
+                draggable="false"
+                src="img/team_2.png"
+              />
+              <h1 id="personS">საბა ქევხიშვილი</h1>
+              <h4 id="statusCounsel">უფროსი მრჩეველი</h4>
+            </a>
+          </li>
+          <li class="card">
+            <a href="#">
+              <img
+                draggable="false"
+                src="img/team_3.jpg"
+              />
+              <h1 id="personM">მიხეილ რეხვიაშვილი</h1>
+              <h4 id="statusCounsel2">უფროსი მრჩეველი</h4>
+            </a>
+          </li>
         </ul>
       </section>
-
-
       <section id="services" class="services">
         <div class="title">
           <img
@@ -254,8 +239,6 @@
           </li>
         </ul>
       </section>
-
-
       <section class="map">
         <div class="title">
           <img
@@ -277,8 +260,6 @@
           <div id="map" style="width: 100%; height: 500px"></div>
         </div>
       </section>
-
-
       <section id="careers" class="careers">
         <div class="title">
           <img
@@ -299,9 +280,7 @@
           </p>
         </div>
       </section>
-
-
-		  <footer class="footer">
+		<footer class="footer">
 			<div class="logo">
 			  <img src="/img/iconi.png" alt="" />
 			</div>
@@ -363,7 +342,7 @@
 				 </a>
 			  </li>
 			</ul>
-		  </footer>
+		 </footer>
     </div>
 
     <footer class="footer">
@@ -429,10 +408,9 @@
         </li>
       </ul>
     </footer>
-
-    <script src="./scripts/lang.js?v10.7"></script>
+    <script src="./scripts/lang.js"></script>
     <script src="./scripts/cursor.js"></script>
     <script src="./scripts/index.js"></script>
-    <script src="./scripts/map.js?v3"></script>
+    <script src="./scripts/map.js"></script>
   </body>
 </html>
