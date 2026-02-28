@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="280" viewBox="0 0 600 280">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1b2d44"/>
+      <stop offset="100%" style="stop-color:#0d1b2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="280" fill="url(#bg2)"/>
+  <!-- Document/contract icon -->
+  <g transform="translate(300,110)">
+    <rect x="-28" y="-38" width="56" height="72" rx="4" fill="none" stroke="#b08d57" stroke-width="2" opacity="0.4"/>
+    <rect x="-20" y="-24" width="30" height="2" rx="1" fill="#b08d57" opacity="0.3"/>
+    <rect x="-20" y="-16" width="40" height="2" rx="1" fill="#b08d57" opacity="0.3"/>
+    <rect x="-20" y="-8" width="35" height="2" rx="1" fill="#b08d57" opacity="0.3"/>
+    <rect x="-20" y="0" width="40" height="2" rx="1" fill="#b08d57" opacity="0.3"/>
+    <rect x="-20" y="8" width="25" height="2" rx="1" fill="#b08d57" opacity="0.3"/>
+    <!-- Checkmark -->
+    <g transform="translate(10, 18)" opacity="0.5">
+      <polyline points="-6,0 -2,4 6,-4" fill="none" stroke="#b08d57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <!-- Corner fold -->
+    <path d="M 14,-38 L 28,-38 L 28,-24 Z" fill="#b08d57" opacity="0.1"/>
+  </g>
+  <!-- Scale of justice accent -->
+  <g transform="translate(300, 200)" opacity="0.12">
+    <line x1="0" y1="-15" x2="0" y2="15" stroke="#c9a76c" stroke-width="2"/>
+    <line x1="-30" y1="-12" x2="30" y2="-12" stroke="#c9a76c" stroke-width="2"/>
+    <circle cx="-30" cy="-8" r="8" fill="none" stroke="#c9a76c" stroke-width="1.5"/>
+    <circle cx="30" cy="-8" r="8" fill="none" stroke="#c9a76c" stroke-width="1.5"/>
+  </g>
+  <!-- Decorative dots -->
+  <circle cx="100" cy="50" r="3" fill="#b08d57" opacity="0.2"/>
+  <circle cx="500" cy="230" r="3" fill="#b08d57" opacity="0.2"/>
+  <circle cx="170" cy="240" r="2" fill="#b08d57" opacity="0.15"/>
+  <circle cx="430" cy="40" r="2" fill="#b08d57" opacity="0.15"/>
+  <!-- Accent line -->
+  <rect x="40" y="240" width="24" height="2" rx="1" fill="#b08d57" opacity="0.3"/>
+</svg>
