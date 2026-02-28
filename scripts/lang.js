@@ -26,9 +26,6 @@ function applyText(languageData) {
   const navFounder = document.querySelector(".nav .founder");
   if (navFounder) navFounder.textContent = languageData.founder;
 
-  const navLocation = document.querySelector(".nav .location");
-  if (navLocation) navLocation.textContent = languageData.location;
-
   const navBlog = document.querySelector(".nav .blog");
   if (navBlog) navBlog.textContent = languageData.blog;
 
@@ -108,14 +105,6 @@ function applyText(languageData) {
   if (careersP2) careersP2.textContent = languageData.careersP2;
   const careers = document.querySelector("#titleCareers");
   if (careers) careers.textContent = languageData.careers;
-  const titleLocation = document.querySelector("#titleLocation");
-  if (titleLocation) titleLocation.textContent = languageData.titleLocation;
-  const locationSubject = document.querySelector("#locationSubject");
-  if (locationSubject)
-    locationSubject.textContent = languageData.locationSubject;
-  const locationAdress = document.querySelector("#locationAdress");
-  if (locationAdress) locationAdress.textContent = languageData.locationAdress;
-
   const blog1Title1 = document.querySelector("#blog1Title1");
   if (blog1Title1) blog1Title1.textContent = languageData.blog1Title1;
   const blog1Title2 = document.querySelector("#blog1Title2");
