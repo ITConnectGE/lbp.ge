@@ -99,4 +99,32 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/lawyers/saba-kevkhishvili/" />
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://lbp.ge/en/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/privacy-policy/" />
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/ka/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/privacy-policy/" />
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/en/cookie-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/cookie-policy/" />
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/ka/cookie-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/cookie-policy/" />
+    <priority>0.3</priority>
+  </url>
 </urlset>

@@ -276,6 +276,14 @@ function applyText(languageData) {
   if (footerContactHeading) footerContactHeading.textContent = languageData.footerContactHeading;
   const footerAddress = document.querySelector("#footerAddress");
   if (footerAddress) footerAddress.textContent = languageData.footerAddress;
+  const footerPrivacyPolicy = document.querySelector("#footerPrivacyPolicy");
+  if (footerPrivacyPolicy) footerPrivacyPolicy.textContent = languageData.footerPrivacyPolicy;
+  const footerCookiePolicy = document.querySelector("#footerCookiePolicy");
+  if (footerCookiePolicy) footerCookiePolicy.textContent = languageData.footerCookiePolicy;
+  const footerBlog1 = document.querySelector("#footerBlog1");
+  if (footerBlog1) footerBlog1.textContent = languageData.footerBlog1;
+  const footerBlog2 = document.querySelector("#footerBlog2");
+  if (footerBlog2) footerBlog2.textContent = languageData.footerBlog2;
 
   // Contact page
   const contactPageTitle = document.querySelector("#contactPageTitle");
@@ -294,6 +302,16 @@ function applyText(languageData) {
   if (contactPageCTA) contactPageCTA.textContent = languageData.contactPageCTA;
   const contactPageMapTitle = document.querySelector("#contactPageMapTitle");
   if (contactPageMapTitle) contactPageMapTitle.textContent = languageData.contactPageMapTitle;
+  const contactPageDirections = document.querySelector("#contactPageDirections");
+  if (contactPageDirections) contactPageDirections.innerHTML = '<img src="/img/map.svg" alt="" /> ' + languageData.contactPageDirections;
+
+  // Stats
+  const statCases = document.querySelector("#statCases");
+  if (statCases) statCases.textContent = languageData.statCases;
+  const statPracticeAreas = document.querySelector("#statPracticeAreas");
+  if (statPracticeAreas) statPracticeAreas.textContent = languageData.statPracticeAreas;
+  const statContracts = document.querySelector("#statContracts");
+  if (statContracts) statContracts.textContent = languageData.statContracts;
 
   // Founder
   const titleFounder = document.querySelector("#titleFounder");

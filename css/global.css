@@ -1103,6 +1103,26 @@ section {
   margin: 0;
 }
 
+.footer-legal-links {
+  margin-top: 8px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.footer-legal-links a {
+  color: rgba(255, 255, 255, 0.45);
+  transition: color var(--transition);
+}
+
+.footer-legal-links a:hover {
+  color: var(--color-accent);
+}
+
+.footer-legal-links .separator {
+  margin: 0 8px;
+  opacity: 0.5;
+}
+
 /* Footer responsive */
 @media (max-width: 1024px) {
   .footer-top {
@@ -1762,4 +1782,208 @@ section {
 .services .list .card ul li:hover .practice-desc {
   max-height: 80px;
   padding-top: 8px;
+}
+
+
+/* ================================================================
+   DARK THEME
+   ================================================================ */
+[data-theme="dark"] {
+  --color-primary: #0a1628;
+  --color-primary-light: #162a42;
+  --color-accent: #c9a76c;
+  --color-accent-hover: #dbb97e;
+  --color-bg: #0f1923;
+  --color-bg-alt: #162a42;
+  --color-text: #eae8e4;
+  --color-text-secondary: #b0aea8;
+  --color-border: #253d5a;
+  --color-white: #1b2d44;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] ::selection {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+[data-theme="dark"] .header {
+  background: #070f1c;
+}
+
+[data-theme="dark"] .header.scrolled {
+  background: rgba(7, 15, 28, 0.95);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #0a1628;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #1f3350;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #2a4570;
+}
+
+[data-theme="dark"] .back-to-top::before {
+  border-left-color: #0d1b2a;
+  border-top-color: #0d1b2a;
+}
+
+[data-theme="dark"] .footer-mobile {
+  background: #070f1c;
+}
+
+[data-theme="dark"] .dekstop-selector,
+[data-theme="dark"] .burder-content select {
+  color: #eae8e4;
+}
+
+[data-theme="dark"] select option {
+  background: #0f1923;
+  color: #eae8e4;
+}
+
+[data-theme="dark"] img:not([src$=".svg"]) {
+  filter: brightness(0.9);
+}
+
+[data-theme="dark"] .contact-detail .icon {
+  background: var(--color-accent);
+}
+
+[data-theme="dark"] .messenger-link {
+  color: var(--color-text);
+}
+
+/* Dark mode text contrast fixes — elements that use --color-primary for text */
+[data-theme="dark"] .section-title h1 {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .section-title h1::before,
+[data-theme="dark"] .section-title h1::after {
+  background: var(--color-border);
+}
+
+[data-theme="dark"] .footer-heading {
+  color: #eae8e4;
+}
+
+[data-theme="dark"] .about .content .info h4 {
+  color: var(--color-accent);
+}
+
+[data-theme="dark"] .person .title {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .blog .content h1 {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .blog .content .items .item .subject {
+  color: var(--color-accent);
+}
+
+[data-theme="dark"] .services .list .card .stroke {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .team .card h1 {
+  color: var(--color-text);
+}
+
+[data-theme="dark"] .button:not(.button-primary):not(.button-ghost) {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  border-color: var(--color-accent);
+}
+
+[data-theme="dark"] .button:not(.button-primary):not(.button-ghost):hover {
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+
+/* ===== THEME TOGGLE BUTTON ===== */
+#themeToggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  color: var(--color-white);
+  cursor: pointer;
+  padding: 5px 8px;
+  font-size: 1rem;
+  line-height: 1;
+  transition: border-color var(--transition), background var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#themeToggle:hover,
+#themeToggle:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 920px) {
+  .nav li #themeToggle {
+    display: none;
+  }
+
+  .burder-content #themeToggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-sm);
+    color: white;
+    cursor: pointer;
+    padding: 5px 8px;
+    font-size: 1rem;
+    line-height: 1;
+  }
+}
+
+
+/* ================================================================
+   WHATSAPP FLOATING BUTTON
+   ================================================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 92px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+  z-index: 800;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 850px) {
+  .whatsapp-float {
+    display: none;
+  }
 }

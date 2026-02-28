@@ -147,6 +147,30 @@
         box-shadow: var(--shadow-md);
       }
 
+      .directions-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        background: var(--color-accent);
+        color: #fff;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: var(--radius-sm);
+        transition: background var(--transition), transform var(--transition);
+      }
+
+      .directions-link:hover {
+        background: var(--color-accent-hover);
+        transform: translateY(-2px);
+      }
+
+      .directions-link img {
+        width: 18px;
+        height: 18px;
+        filter: brightness(0) invert(1);
+      }
+
       .contact-messengers {
         display: flex;
         gap: 16px;
@@ -191,6 +215,14 @@
         .contact-detail {
           padding: 16px;
         }
+      }
+
+      [data-theme="dark"] .contact-detail .detail-content h4 {
+        color: var(--color-text);
+      }
+
+      [data-theme="dark"] .contact-map h2 {
+        color: var(--color-text);
       }
     </style>
   </head>
@@ -239,12 +271,14 @@
             <option value="ka">&#4325;&#4304;</option>
           </select>
         </li>
+        <li><button id="themeToggle" aria-label="Switch to dark mode"></button></li>
       </ul>
       <div class="burder-content">
         <select id="languageSelectorMobile" onchange="changeLanguage(this.value)">
           <option value="en">En</option>
           <option value="ka">&#4325;&#4304;</option>
         </select>
+        <button id="themeToggle" aria-label="Switch to dark mode"></button>
         <div class="burger" onclick="toggleMenu()">
           <span></span>
           <span></span>
@@ -316,85 +350,23 @@
             <h2 id="contactPageMapTitle">Find Us</h2>
             <img src="/img/mapPhoto.jpg" alt="LBP Office at Axis Towers, Tbilisi" class="office-photo" loading="lazy" />
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.5!2d44.7560103!3d41.7117567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e6015555%3A0x6e934ba45cc5570d!2sAxis%20Towers!5e0!3m2!1sen!2sge!4v1700000000000!5m2!1sen!2sge"
+              src="https://maps.google.com/maps?q=Axis+Towers,+Tbilisi,+Georgia&t=&z=16&ie=UTF8&iwloc=&output=embed"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               title="LBP Office Location - Axis Towers, Tbilisi"
             ></iframe>
+            <a href="https://www.google.com/maps/dir//Axis+Towers,+Tbilisi,+Georgia" target="_blank" rel="noopener noreferrer" class="directions-link" id="contactPageDirections">
+              <img src="/img/map.svg" alt="" /> მიმართულების ჩვენება
+            </a>
           </div>
         </div>
       </section>
     </div>
 
-    <footer class="footer">
-      <div class="footer-top">
-        <div class="footer-col footer-brand">
-          <img src="/img/iconi.png" alt="LBP" class="footer-logo" />
-          <p id="footerAbout" class="footer-tagline">Legal & Business Partners — Your trusted legal advisors in Georgia and beyond.</p>
-          <ul class="footer-social">
-            <li><a href="https://www.linkedin.com/company/lbp-law-office/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><img src="/img/linked.svg" alt="LinkedIn" /></a></li>
-            <li><a href="https://www.facebook.com/LBPLawOffice" target="_blank" rel="noopener noreferrer"><img src="/img/facebook.svg" alt="Facebook" /></a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-heading" id="footerQuickLinks">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="../#about" id="footerLinkAbout">About</a></li>
-            <li><a href="../#founder" id="footerLinkFounder">Founder</a></li>
-            <li><a href="../#services" id="footerLinkServices">Practice Areas</a></li>
-            <li><a href="../#titleCareers" id="footerLinkCareers">Careers</a></li>
-            <li><a href="./" id="footerLinkLocation">Our Office</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-heading" id="footerBlogHeading">Blog</h4>
-          <ul class="footer-links">
-            <li><a href="../blog/">Virtual Assets in Georgia</a></li>
-            <li><a href="../blog/LabourRegulation/">Labour Regulation</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-heading" id="footerContactHeading">Contact</h4>
-          <ul class="footer-contact">
-            <li>
-              <img src="/img/email.svg" alt="" class="footer-icon" />
-              <a href="mailto:info@lbp.ge">info@lbp.ge</a>
-            </li>
-            <li>
-              <img src="/img/phone.svg" alt="" class="footer-icon" />
-              <a href="tel:+995595223333">+995-595-223-333</a>
-            </li>
-            <li>
-              <img src="/img/map.svg" alt="" class="footer-icon" />
-              <span id="footerAddress">37m Ilia Chavchavadze Ave, Tbilisi 0179</span>
-            </li>
-            <li>
-              <img src="/img/whatsapp.svg" alt="" class="footer-icon" />
-              <a href="https://wa.me/12023912609" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            </li>
-            <li>
-              <img src="/img/telegram.svg" alt="" class="footer-icon" />
-              <a href="https://t.me/FCCC27" target="_blank" rel="noopener noreferrer">Telegram</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 LBP — Legal & Business Partners. All rights reserved.</p>
-      </div>
-    </footer>
+    <footer class="footer"></footer>
 
-    <footer class="footer-mobile">
-      <ul class="footer-mobile-links">
-        <li><a href="mailto:info@lbp.ge"><img src="/img/email.svg" alt="Email" /></a></li>
-        <li><a href="tel:+995595223333"><img src="/img/phone.svg" alt="Phone" /></a></li>
-        <li><a href="https://wa.me/12023912609" target="_blank" rel="noopener noreferrer"><img src="/img/whatsapp.svg" alt="WhatsApp" /></a></li>
-        <li><a href="https://t.me/FCCC27" target="_blank" rel="noopener noreferrer"><img src="/img/telegram.svg" alt="Telegram" /></a></li>
-        <li><a href="https://www.linkedin.com/company/lbp-law-office/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><img src="/img/linked.svg" alt="LinkedIn" /></a></li>
-        <li><a href="https://www.facebook.com/LBPLawOffice" target="_blank" rel="noopener noreferrer"><img src="/img/facebook.svg" alt="Facebook" /></a></li>
-      </ul>
-    </footer>
+    <footer class="footer-mobile"></footer>
 
     <script type="application/ld+json">
     {
@@ -419,8 +391,11 @@
       ]
     }
     </script>
+    <a href="https://wa.me/12023912609" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img src="/img/whatsapp.svg" alt="WhatsApp" /></a>
     <button class="back-to-top" aria-label="Back to top"></button>
+    <script src="/scripts/footer.js"></script>
     <script src="/scripts/lang.js"></script>
     <script src="/scripts/index.js"></script>
+    <script src="/scripts/cookie-consent.js"></script>
   </body>
 </html>

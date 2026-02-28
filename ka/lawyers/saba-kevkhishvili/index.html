@@ -50,6 +50,7 @@
             <option value="ka">ქა</option>
           </select>
         </li>
+        <li><button id="themeToggle" aria-label="Switch to dark mode"></button></li>
         <a href="../../#home" class="item home">Home</a>
         <a href="../../#team" class="item team">Team</a>
         <a href="../../#about" class="item about">About</a>
@@ -63,6 +64,7 @@
           <option value="en">En</option>
           <option value="ka">ქა</option>
         </select>
+        <button id="themeToggle" aria-label="Switch to dark mode"></button>
         <div class="burger" onclick="toggleMenu()">
           <span></span>
           <span></span>
@@ -113,51 +115,9 @@
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="logo">
-        <img src="http://lbp.ge/wp-content/uploads/2023/09/iconi.png" alt="LBP" />
-      </div>
-      <ul class="contact">
-        <li>
-          <span
-            ><h4 id="gmail"></h4>
-            <a href="mailto:info@lbp.ge"
-              >info@lbp.ge</a
-            >
-          </span>
-        </li>
-        <li>
-          <span>
-            <h4 id="phone">ტელეფონი:</h4>
-            <a href="tel:+995595432894">+995-595-432-894</a>
-            <a href="tel:+12023912609">+1-(202)-391-2609</a>
-          </span>
-        </li>
-      </ul>
-      <ul class="contact-mb">
-        <li>
-          <a href="mailto:info@lbp.ge"> <img src="/img/email.svg" alt="Email" /></a>
-        </li>
-        <li>
-          <a href="tel:+995595432894">
-            <img src="/img/phone.svg" alt="Phone" />
-            <img src="/img/georgia.svg" alt="Georgia" class="flag"
-          /></a>
-        </li>
-        <li>
-          <a href="tel:+12023912609">
-            <img src="/img/phone.svg" alt="Phone" />
-            <img src="/img/canada.svg" alt="Canada" class="flag" />
-          </a>
-        </li>
-      </ul>
-      <ul class="social">
-        <li><img src="/img/facebook.svg" alt="Facebook" /></li>
-        <li><img src="/img/telegram.svg" alt="Telegram" /></li>
-        <li><img src="/img/linked.svg" alt="LinkedIn" /></li>
-        <li><img src="/img/whatsapp.svg" alt="WhatsApp" /></li>
-      </ul>
-    </footer>
+    <footer class="footer"></footer>
+    <footer class="footer-mobile"></footer>
+    <a href="https://wa.me/12023912609" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img src="/img/whatsapp.svg" alt="WhatsApp" /></a>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -172,7 +132,9 @@
       "url": "https://lbp.ge/ka/lawyers/saba-kevkhishvili/"
     }
     </script>
+    <script src="/scripts/footer.js"></script>
     <script src="/scripts/lang.js"></script>
     <script src="/scripts/index.js"></script>
+    <script src="/scripts/cookie-consent.js"></script>
   </body>
 </html>
