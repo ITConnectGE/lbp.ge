@@ -224,6 +224,104 @@
       [data-theme="dark"] .contact-map h2 {
         color: var(--color-text);
       }
+
+      /* FAQ Accordion */
+      .faq-section {
+        padding: 80px 0 40px;
+      }
+
+      .faq-section .section-title {
+        margin-bottom: 32px;
+      }
+
+      .faq-list {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .faq-item {
+        background: var(--color-white);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        overflow: hidden;
+        transition: box-shadow var(--transition);
+      }
+
+      .faq-item:hover {
+        box-shadow: var(--shadow-md);
+      }
+
+      .faq-question {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 20px 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--color-text);
+        text-align: left;
+        font-family: inherit;
+        transition: color var(--transition);
+      }
+
+      .faq-question::after {
+        content: "+";
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: var(--color-accent);
+        flex-shrink: 0;
+        transition: transform var(--transition);
+      }
+
+      .faq-item.active .faq-question {
+        color: var(--color-accent);
+      }
+
+      .faq-item.active .faq-question::after {
+        content: "\2212";
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+
+      .faq-answer p {
+        padding: 0 24px 20px;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: var(--color-text-secondary);
+      }
+
+      @media (max-width: 600px) {
+        .faq-question {
+          padding: 16px 20px;
+          font-size: 0.9rem;
+        }
+
+        .faq-answer p {
+          padding: 0 20px 16px;
+          font-size: 0.9rem;
+        }
+      }
+
+      [data-theme="dark"] .faq-question {
+        color: var(--color-text);
+      }
+
+      [data-theme="dark"] .faq-item.active .faq-question {
+        color: var(--color-accent);
+      }
     </style>
   </head>
   <body>
@@ -359,6 +457,50 @@
             <a href="https://www.google.com/maps/dir//Axis+Towers,+Tbilisi,+Georgia" target="_blank" rel="noopener noreferrer" class="directions-link" id="contactPageDirections">
               <img src="/img/map.svg" alt="" /> Get Directions
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <div class="section-title">
+          <h1 id="faqTitle">Frequently Asked Questions</h1>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" id="faqQ1">How do I schedule a consultation with LBP?</button>
+            <div class="faq-answer">
+              <p id="faqA1">You can schedule a consultation by emailing us at info@lbp.ge, calling +995-595-223-333, or reaching out via WhatsApp or Telegram. We typically respond within one business day.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" id="faqQ2">What areas of law does LBP cover?</button>
+            <div class="faq-answer">
+              <p id="faqA2">LBP covers 15+ practice areas including corporate law, criminal law, labor law, crypto and digital assets, IP and personal data, investment and real estate, litigation, sports law, and more.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" id="faqQ3">Does LBP work with international clients?</button>
+            <div class="faq-answer">
+              <p id="faqA3">Yes. LBP has represented clients from North America, Western Europe, East Asia, Latin America, Eastern Europe, Central Asia, and Australia. We are experienced in cross-border matters.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" id="faqQ4">What are your fees and payment structure?</button>
+            <div class="faq-answer">
+              <p id="faqA4">Our fees depend on the type and complexity of the legal matter. We offer flexible billing arrangements including fixed fees, hourly rates, and retainer agreements. Contact us for a personalized quote.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" id="faqQ5">Do you offer services in English?</button>
+            <div class="faq-answer">
+              <p id="faqA5">Absolutely. Our team is fluent in English and Georgian. We regularly draft documents, conduct negotiations, and represent clients in English across all practice areas.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" id="faqQ6">How long does a typical legal matter take?</button>
+            <div class="faq-answer">
+              <p id="faqA6">Timelines vary depending on the matter. Simple consultations can be completed in days, while complex litigation or corporate transactions may take several months. We provide realistic time estimates during your initial consultation.</p>
+            </div>
           </div>
         </div>
       </section>

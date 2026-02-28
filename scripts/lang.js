@@ -328,6 +328,46 @@ function applyText(languageData) {
 
   const textFounder3 = document.querySelector("#textFounder3");
   if (textFounder3) textFounder3.innerHTML = languageData.textFounder3;
+
+  // FAQ
+  const faqTitle = document.querySelector("#faqTitle");
+  if (faqTitle) faqTitle.textContent = languageData.faqTitle;
+  for (var i = 1; i <= 6; i++) {
+    var q = document.querySelector("#faqQ" + i);
+    if (q) q.textContent = languageData["faqQ" + i];
+    var a = document.querySelector("#faqA" + i);
+    if (a) a.textContent = languageData["faqA" + i];
+  }
+
+  // Testimonials
+  var titleTestimonials = document.querySelector("#titleTestimonials");
+  if (titleTestimonials) titleTestimonials.textContent = languageData.titleTestimonials;
+  for (var t = 1; t <= 5; t++) {
+    var tText = document.querySelector("#testimonial" + t + "Text");
+    if (tText) tText.textContent = languageData["testimonial" + t + "Text"];
+    var tAuthor = document.querySelector("#testimonial" + t + "Author");
+    if (tAuthor) tAuthor.textContent = languageData["testimonial" + t + "Author"];
+  }
+
+  // Founder tabs
+  var founderTabBio = document.querySelector("#founderTabBio");
+  if (founderTabBio) founderTabBio.textContent = languageData.founderTabBio;
+  var founderTabTimeline = document.querySelector("#founderTabTimeline");
+  if (founderTabTimeline) founderTabTimeline.textContent = languageData.founderTabTimeline;
+  for (var tl = 1; tl <= 5; tl++) {
+    var year = document.querySelector("#timelineYear" + tl);
+    if (year) year.textContent = languageData["timelineYear" + tl];
+    var title = document.querySelector("#timelineTitle" + tl);
+    if (title) title.textContent = languageData["timelineTitle" + tl];
+    var desc = document.querySelector("#timelineDesc" + tl);
+    if (desc) desc.textContent = languageData["timelineDesc" + tl];
+  }
+
+  // Blog card excerpts
+  var blogCardExcerpt1 = document.querySelector("#blogCardExcerpt1");
+  if (blogCardExcerpt1) blogCardExcerpt1.textContent = languageData.blogCardExcerpt1;
+  var blogCardExcerpt2 = document.querySelector("#blogCardExcerpt2");
+  if (blogCardExcerpt2) blogCardExcerpt2.textContent = languageData.blogCardExcerpt2;
 }
 
 function changeLanguage(language) {

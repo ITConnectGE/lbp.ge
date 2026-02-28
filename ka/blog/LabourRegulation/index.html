@@ -95,16 +95,24 @@
     <div class="container">
       <section class="blog">
         <div class="burgerList" id="burgerList"><img src="/img/list.ico" alt=""></div>
-        <ul class="list" id="blogList">
-          <li>
-            <button onclick="window.location.href='../'" class="blogs" id="blog1">Virtual Assets in Georgia 1</button>
-          </li>
-          <li>
-            <button onclick="window.location.href='./'" class="blogs active" id="blog2">
-              Labour Regulation
-            </button>
-          </li>
-        </ul>
+        <nav class="blog-sidebar" id="blogList">
+          <a href="../" class="blog-nav-card">
+            <div class="blog-nav-thumb-placeholder virtual-assets"></div>
+            <div class="blog-nav-info">
+              <h3 id="blog1">ვირტუალური აქტივები</h3>
+              <p class="blog-nav-excerpt" id="blogCardExcerpt1">კრიპტოვალუტის მომსახურების პროვაიდერებისთვის რეგულაცია, ლიცენზირება და პრაქტიკული გამოწვევები საქართველოს კანონმდებლობით.</p>
+              <span class="blog-nav-author" id="blog1Author">მარიამ ზაუტაშვილი, LBP-ს უფროსი იურისტი</span>
+            </div>
+          </a>
+          <a href="./" class="blog-nav-card active">
+            <div class="blog-nav-thumb-placeholder labour-regulation"></div>
+            <div class="blog-nav-info">
+              <h3 id="blog2">შრომის შინაგანაწესი</h3>
+              <p class="blog-nav-excerpt" id="blogCardExcerpt2">რატომ არის შრომის შინაგანაწესი აუცილებელი ყველა ბიზნესისთვის, რომელსაც დასაქმებულები ჰყავს საქართველოში.</p>
+              <span class="blog-nav-author" id="blog2Author">ქეთა მედულაშვილი, LBP-ს იურიდიული ასისტენტი</span>
+            </div>
+          </a>
+        </nav>
         <div class="content" id="content">
           <h1 id="blog2Title1">
             The Importance of Internal Labor Regulations for Companies
