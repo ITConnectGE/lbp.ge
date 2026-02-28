@@ -1835,6 +1835,10 @@ section {
   border-top-color: #0d1b2a;
 }
 
+[data-theme="dark"] .start {
+  color: #eae8e4;
+}
+
 [data-theme="dark"] .footer-mobile {
   background: #070f1c;
 }
