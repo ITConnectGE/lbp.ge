@@ -34,7 +34,6 @@ blog2.addEventListener("click", () => {
 	<h1>
 	Virtual Assets in Georgia 2: Regulation and New Practical Challenges
  </h1>
- <div class="data">04.12.2024</div>
  <ul class="nav">
 	<a href="#provider">Virtual Asset Service Provider</a>
 	<a href="#practice">Practice </a>
@@ -116,7 +115,6 @@ blog3?.addEventListener("click", () => {
 	<h1>
 	Virtual Assets in Georgia 3: Regulation and New Practical Challenges
  </h1>
- <div class="data">05.12.2024</div>
  <ul class="nav">
 	<a href="#provider">Virtual Asset Service Provider</a>
 	<a href="#practice">Practice </a>
@@ -199,7 +197,6 @@ blog4?.addEventListener("click", () => {
 	<h1>
 	Virtual Assets in Georgia 6: Regulation and New Practical Challenges
  </h1>
- <div class="data">03.12.2024</div>
  <ul class="nav">
 	<a href="#provider">Virtual Asset Service Provider</a>
 	<a href="#practice">Practice </a>
