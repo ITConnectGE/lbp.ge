@@ -141,8 +141,27 @@
 	"founder": "Founder",
 	"titleFounder": "LBP's Founder",
 	"subjectFounder": "The Founder",
-	"textFounder1": "Giorgi Shalamberidze is the founder and Managing Partner of LBP Law Office.<br><br>His professional journey includes prior roles at PricewaterhouseCoopers (PwC), one of the Big Four firms, as well as positions with the Georgian Young Lawyers Association, Tbilisi State University, and the J&T Consulting educational centre.<br> Giorgi’s practice focuses on complex litigation, criminal defense, private wealth management, digital assets, and technology law.<br><br> He is admitted to the Georgian Bar Association and is an active member of a leading Georgian policy think tank, combining deep legal expertise with strategic policy insight. <br> He graduated from Tbilisi State University in 2020 and earned an LL.M. from Georgetown University Law Center in 2023 in Washington, D.C., having received full-tuition scholarships for both degrees in recognition of his academic excellence. <br><br> Giorgi has represented clients from all over the world including North America, Western Europe, East Asia, Latin America, Eastern Europe, Central Asia and Australia.<br> His notable engagements include: <ul><li>Serving as counsel to one of Georgia’s premier brandy producers;</li><li>Advising the Georgian padel and fencing federations;</li><li>Representing one of the country’s leading publishing houses;</li><li>Advising investors from Canada, France, Spain, and Poland in major real-estate acquisitions;</li><li>Structuring cross-border estates for U.S. clients;</li><li>Litigating complex corporate disputes for a multinational corporation operating across more than a dozen jurisdictions.</li></ul><br>Outside his legal practice, Giorgi maintains a strong interest in architecture and is an avid traveler, continuously exploring new countries."
- 
+	"textFounder1": "Giorgi Shalamberidze is the founder and Managing Partner of LBP Law Office.<br><br>His professional journey includes prior roles at PricewaterhouseCoopers (PwC), one of the Big Four firms, as well as positions with the Georgian Young Lawyers Association, Tbilisi State University, and the J&T Consulting educational centre.<br> Giorgi’s practice focuses on complex litigation, criminal defense, private wealth management, digital assets, and technology law.<br><br> He is admitted to the Georgian Bar Association and is an active member of a leading Georgian policy think tank, combining deep legal expertise with strategic policy insight. <br> He graduated from Tbilisi State University in 2020 and earned an LL.M. from Georgetown University Law Center in 2023 in Washington, D.C., having received full-tuition scholarships for both degrees in recognition of his academic excellence. <br><br> Giorgi has represented clients from all over the world including North America, Western Europe, East Asia, Latin America, Eastern Europe, Central Asia and Australia.<br> His notable engagements include: <ul><li>Serving as counsel to one of Georgia’s premier brandy producers;</li><li>Advising the Georgian padel and fencing federations;</li><li>Representing one of the country’s leading publishing houses;</li><li>Advising investors from Canada, France, Spain, and Poland in major real-estate acquisitions;</li><li>Structuring cross-border estates for U.S. clients;</li><li>Litigating complex corporate disputes for a multinational corporation operating across more than a dozen jurisdictions.</li></ul><br>Outside his legal practice, Giorgi maintains a strong interest in architecture and is an avid traveler, continuously exploring new countries.",
+
+	"statClients": "Clients",
+	"statPracticeAreas": "Practice Areas",
+	"statYears": "Years",
+
+	"descType1": "Guidance on regulatory compliance, licensing, and government proceedings.",
+	"descType2": "Business formation, governance, M&A, and shareholder agreements.",
+	"descType3": "Antitrust compliance, fair competition, and consumer rights advocacy.",
+	"descType4": "Defense and representation in criminal investigations and proceedings.",
+	"descType5": "Regulatory compliance for blockchain, tokens, and virtual asset services.",
+	"descType6": "Property transactions, due diligence, and investment structuring.",
+	"descType7": "Trademark, copyright protection, and data privacy compliance.",
+	"descType8": "Employment contracts, workplace disputes, and HR compliance.",
+	"descType9": "Court representation, arbitration, and mediation services.",
+	"descType10": "Residency permits, work visas, and banking regulatory support.",
+	"descType11": "Regulatory and transactional support for the energy sector.",
+	"descType12": "Structuring and documenting complex financing arrangements.",
+	"descType13": "Corporate restructuring, debt workouts, and insolvency proceedings.",
+	"descType14": "Athlete contracts, federation governance, and sports dispute resolution.",
+	"descType15": "Tax planning, estate structuring, and wealth management."
 }
 
 
