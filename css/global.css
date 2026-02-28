@@ -967,26 +967,26 @@ section {
   gap: 12px;
 }
 
-.footer ul li label {
+.footer ul li span {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
 }
 
-.footer ul li label h4 {
+.footer ul li span h4 {
   font-size: 0.8rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.footer ul li label a {
+.footer ul li span a {
   color: rgba(255, 255, 255, 0.9);
   font-size: 0.85rem;
   transition: color var(--transition);
 }
 
-.footer ul li label a:hover {
+.footer ul li span a:hover {
   color: var(--color-accent);
 }
 
