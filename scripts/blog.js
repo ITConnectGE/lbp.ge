@@ -1,3 +1,4 @@
+const _basePath = document.querySelector('meta[name="base-path"]')?.content || '.';
 const blog1 = document.querySelector("#blog1");
 const blog2 = document.querySelector("#blog2");
 const blog3 = document.querySelector("#blog3");
@@ -46,7 +47,7 @@ blog2.addEventListener("click", () => {
 		</br>
 		</br>
 	<span >
-		<img src="/img/iconi.png" alt="">
+		<img src="${_basePath}/img/iconi.png" alt="">
 		The decree also clarifies that a virtual asset does not include a digital representation of money, securities, or other financial instruments. For example, the Georgian lari cannot be represented as a virtual asset.
 		
 </span>
@@ -93,7 +94,7 @@ Answering: Transactions using virtual assets are prohibited in Georgia, except f
 		<div class="contact">
 			<a class="user" href="https://www.linkedin.com/in/giorgishalamberidze/">
 			<h4 class="author">
-					<img src="/img/photo.jpg" alt=""> Giorgi Shalamberidze
+					<img src="${_basePath}/img/photo.jpg" alt=""> Giorgi Shalamberidze
 			</h4>
 			</a>
 				<h1 id="contact" >Contact our legal team to learn more</h1>
@@ -128,7 +129,7 @@ blog3.addEventListener("click", () => {
 		</br>
 		</br>
 	<span >
-		<img src="/img/iconi.png" alt="">
+		<img src="${_basePath}/img/iconi.png" alt="">
 		The decree also clarifies that a virtual asset does not include a digital representation of money, securities, or other financial instruments. For example, the Georgian lari cannot be represented as a virtual asset.
 		
 </span>
@@ -175,7 +176,7 @@ Answering: Transactions using virtual assets are prohibited in Georgia, except f
 		<div class="contact">
 			<a class="user" href="https://www.linkedin.com/in/giorgishalamberidze/">
 			<h4 class="author">
-					<img src="/img/photo.jpg" alt=""> Giorgi Shalamberidze
+					<img src="${_basePath}/img/photo.jpg" alt=""> Giorgi Shalamberidze
 			</h4>
 			</a>
 				<h1 id="contact" >Contact our legal team to learn more</h1>
@@ -211,7 +212,7 @@ blog4.addEventListener("click", () => {
 		</br>
 		</br>
 	<span >
-		<img src="/img/iconi.png" alt="">
+		<img src="${_basePath}/img/iconi.png" alt="">
 		The decree also clarifies that a virtual asset does not include a digital representation of money, securities, or other financial instruments. For example, the Georgian lari cannot be represented as a virtual asset.
 		
 </span>
@@ -258,7 +259,7 @@ Answering: Transactions using virtual assets are prohibited in Georgia, except f
 		<div class="contact">
 			<a class="user" href="https://www.linkedin.com/in/giorgishalamberidze/">
 			<h4 class="author">
-					<img src="/img/photo.jpg" alt=""> Giorgi Shalamberidze
+					<img src="${_basePath}/img/photo.jpg" alt=""> Giorgi Shalamberidze
 			</h4>
 			</a>
 				<h1 id="contact" >Contact our legal team to learn more</h1>

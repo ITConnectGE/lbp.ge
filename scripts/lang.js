@@ -1,5 +1,6 @@
 function loadLanguageFile(language) {
-  return fetch(`/locales/${language}.json?v10.7`)
+  const base = document.querySelector('meta[name="base-path"]')?.content || '.';
+  return fetch(`${base}/locales/${language}.json`)
     .then((response) => response.json())
     .catch((error) => console.error("Ошибка загрузки файла:", error));
 }
