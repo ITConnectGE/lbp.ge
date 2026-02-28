@@ -1,31 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://lbp.ge/</loc>
+    <loc>https://lbp.ge/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/" />
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://lbp.ge/blog/</loc>
+    <loc>https://lbp.ge/ka/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/" />
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/blog/" />
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lbp.ge/blog/LabourRegulation/</loc>
+    <loc>https://lbp.ge/ka/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/blog/" />
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lbp.ge/lawyers/giorgi-shalamberidze/</loc>
-    <priority>0.7</priority>
+    <loc>https://lbp.ge/en/blog/LabourRegulation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/blog/LabourRegulation/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/blog/LabourRegulation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/blog/LabourRegulation/" />
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lbp.ge/lawyers/mikheil-rekhviashvili/</loc>
-    <priority>0.7</priority>
+    <loc>https://lbp.ge/ka/blog/LabourRegulation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/blog/LabourRegulation/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/blog/LabourRegulation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/blog/LabourRegulation/" />
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://lbp.ge/lawyers/saba-kevkhishvili/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://lbp.ge/contact/</loc>
+    <loc>https://lbp.ge/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/contact/" />
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/ka/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/contact/" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/en/lawyers/giorgi-shalamberidze/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/lawyers/giorgi-shalamberidze/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/lawyers/giorgi-shalamberidze/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/lawyers/giorgi-shalamberidze/" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/ka/lawyers/giorgi-shalamberidze/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/lawyers/giorgi-shalamberidze/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/lawyers/giorgi-shalamberidze/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/lawyers/giorgi-shalamberidze/" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/en/lawyers/mikheil-rekhviashvili/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/lawyers/mikheil-rekhviashvili/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/lawyers/mikheil-rekhviashvili/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/lawyers/mikheil-rekhviashvili/" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/ka/lawyers/mikheil-rekhviashvili/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/lawyers/mikheil-rekhviashvili/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/lawyers/mikheil-rekhviashvili/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/lawyers/mikheil-rekhviashvili/" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/en/lawyers/saba-kevkhishvili/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/lawyers/saba-kevkhishvili/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/lawyers/saba-kevkhishvili/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/lawyers/saba-kevkhishvili/" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/ka/lawyers/saba-kevkhishvili/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/lawyers/saba-kevkhishvili/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/lawyers/saba-kevkhishvili/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/lawyers/saba-kevkhishvili/" />
+    <priority>0.7</priority>
   </url>
 </urlset>

@@ -1,6 +1,11 @@
+function getLanguageFromURL() {
+  const path = window.location.pathname;
+  if (path.startsWith('/ka/') || path === '/ka') return 'ka';
+  return 'en';
+}
+
 function loadLanguageFile(language) {
-  const base = document.querySelector('meta[name="base-path"]')?.content || '.';
-  return fetch(`${base}/locales/${language}.json`)
+  return fetch(`/locales/${language}.json`)
     .then((response) => response.json())
     .catch((error) => console.error("Error loading language file:", error));
 }
@@ -320,9 +325,28 @@ function applyText(languageData) {
 
 function changeLanguage(language) {
   localStorage.setItem("language", language);
+
+  // Navigate to the equivalent page in the other language
+  const path = window.location.pathname;
+  const currentLang = getLanguageFromURL();
+
+  if (language === currentLang) return;
+
+  let newPath;
+  if (currentLang === 'en') {
+    newPath = path.replace(/^\/en(\/|$)/, '/ka$1');
+  } else {
+    newPath = path.replace(/^\/ka(\/|$)/, '/en$1');
+  }
+
+  window.location.href = newPath + window.location.hash;
+}
+
+function applyLanguage(language) {
   document.documentElement.lang = language;
 
   loadLanguageFile(language).then((languageData) => {
+    if (!languageData) return;
     applyText(languageData);
 
     if (language === "ka") {
@@ -336,16 +360,17 @@ function changeLanguage(language) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const savedLanguage = localStorage.getItem("language") || "en";
-  changeLanguage(savedLanguage);
+  const language = getLanguageFromURL();
+  localStorage.setItem("language", language);
+  applyLanguage(language);
 
   // Set value on both desktop and mobile selectors
   const languageSelector = document.getElementById("languageSelector");
   if (languageSelector) {
-    languageSelector.value = savedLanguage;
+    languageSelector.value = language;
   }
   const languageSelectorMobile = document.getElementById("languageSelectorMobile");
   if (languageSelectorMobile) {
-    languageSelectorMobile.value = savedLanguage;
+    languageSelectorMobile.value = language;
   }
 });
