@@ -207,6 +207,47 @@
         }
       }
 
+      .contact-qr {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        background: var(--color-white);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .contact-qr img {
+        width: 120px;
+        height: 120px;
+        flex-shrink: 0;
+      }
+
+      .contact-qr .qr-text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .contact-qr .qr-text h4 {
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--color-primary);
+      }
+
+      .contact-qr .qr-text p {
+        font-size: 0.85rem;
+        color: var(--color-text-secondary);
+        line-height: 1.5;
+      }
+
+      @media (max-width: 1024px) {
+        .contact-qr {
+          display: none;
+        }
+      }
+
       @media (max-width: 600px) {
         .contact-page .content {
           gap: 32px;
@@ -457,6 +498,14 @@
             <a href="https://www.google.com/maps/dir//Axis+Towers,+Tbilisi,+Georgia" target="_blank" rel="noopener noreferrer" class="directions-link" id="contactPageDirections">
               <img src="/img/map.svg" alt="" /> მიმართულების ჩვენება
             </a>
+
+            <div class="contact-qr">
+              <img src="/img/contact-qr.svg" alt="QR კოდი LBP საკონტაქტო ინფორმაციის შესანახად" />
+              <div class="qr-text">
+                <h4 id="contactPageQRTitle">შეინახეთ ჩვენი კონტაქტი</h4>
+                <p id="contactPageQRDesc">დაასკანერეთ QR კოდი LBP-ის საკონტაქტო ინფორმაციის თქვენს ტელეფონში დასამატებლად.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
