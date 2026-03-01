@@ -2056,7 +2056,6 @@ section {
 
 .services .list .card ul li:hover {
   border-left-color: var(--color-accent);
-  padding-left: 20px;
 }
 
 .practice-desc {
