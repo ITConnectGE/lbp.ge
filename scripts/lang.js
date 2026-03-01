@@ -99,6 +99,13 @@ function applyText(languageData) {
   if (listType14) listType14.textContent = languageData.listType14;
   const listType15 = document.querySelector("#listType15");
   if (listType15) listType15.textContent = languageData.listType15;
+
+  // Practice area descriptions
+  for (var d = 1; d <= 15; d++) {
+    var desc = document.querySelector("#descType" + d);
+    if (desc) desc.textContent = languageData["descType" + d];
+  }
+
   const careersP1 = document.querySelector("#careersP1");
   if (careersP1) careersP1.textContent = languageData.careersP1;
   const careersP2 = document.querySelector("#careersP2");
@@ -304,6 +311,10 @@ function applyText(languageData) {
   if (contactPageMapTitle) contactPageMapTitle.textContent = languageData.contactPageMapTitle;
   const contactPageDirections = document.querySelector("#contactPageDirections");
   if (contactPageDirections) contactPageDirections.innerHTML = '<img src="/img/map.svg" alt="" /> ' + languageData.contactPageDirections;
+  const contactPageQRTitle = document.querySelector("#contactPageQRTitle");
+  if (contactPageQRTitle) contactPageQRTitle.textContent = languageData.contactPageQRTitle;
+  const contactPageQRDesc = document.querySelector("#contactPageQRDesc");
+  if (contactPageQRDesc) contactPageQRDesc.textContent = languageData.contactPageQRDesc;
 
   // Stats
   const statCases = document.querySelector("#statCases");
