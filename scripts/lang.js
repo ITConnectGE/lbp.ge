@@ -1,11 +1,11 @@
 function getLanguageFromURL() {
   const path = window.location.pathname;
-  if (path.startsWith('/lbp.ge/ka/') || path.startsWith('/lbp.ge/ka')) return 'ka';
+  if (path.startsWith('/ka/') || path.startsWith('/ka')) return 'ka';
   return 'en';
 }
 
 function loadLanguageFile(language) {
-  return fetch(`/lbp.ge/locales/${language}.json`)
+  return fetch(`/locales/${language}.json`)
     .then((response) => response.json())
     .catch((error) => console.error("Error loading language file:", error));
 }
@@ -310,7 +310,7 @@ function applyText(languageData) {
   const contactPageMapTitle = document.querySelector("#contactPageMapTitle");
   if (contactPageMapTitle) contactPageMapTitle.textContent = languageData.contactPageMapTitle;
   const contactPageDirections = document.querySelector("#contactPageDirections");
-  if (contactPageDirections) contactPageDirections.innerHTML = '<img src="/lbp.ge/img/map.svg" alt="" /> ' + languageData.contactPageDirections;
+  if (contactPageDirections) contactPageDirections.innerHTML = '<img src="/img/map.svg" alt="" /> ' + languageData.contactPageDirections;
   const contactPageQRTitle = document.querySelector("#contactPageQRTitle");
   if (contactPageQRTitle) contactPageQRTitle.textContent = languageData.contactPageQRTitle;
   const contactPageQRDesc = document.querySelector("#contactPageQRDesc");
@@ -392,9 +392,9 @@ function changeLanguage(language) {
 
   let newPath;
   if (currentLang === 'en') {
-    newPath = path.replace(/^\/lbp\.ge\/en(\/|$)/, '/lbp.ge/ka$1');
+    newPath = path.replace(/^\/en(\/|$)/, '/ka$1');
   } else {
-    newPath = path.replace(/^\/lbp\.ge\/ka(\/|$)/, '/lbp.ge/en$1');
+    newPath = path.replace(/^\/ka(\/|$)/, '/en$1');
   }
 
   window.location.href = newPath + window.location.hash;
