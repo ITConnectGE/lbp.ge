@@ -65,9 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
     burger.classList.remove("open");
   }
 
-  if (burger) {
-    burger.addEventListener("click", toggleMenu);
-  }
+  // onclick="toggleMenu()" in HTML calls the global toggleMenu,
+  // so no addEventListener here to avoid double-toggle
 
   links.forEach((link) => {
     link.addEventListener("click", closeMenu);
