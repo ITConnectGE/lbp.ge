@@ -1437,7 +1437,7 @@ section {
   }
 
   .blog .content .author {
-    width: 80vw !important;
+    width: 100% !important;
   }
 
   .blog .content .nav {
@@ -2182,41 +2182,3 @@ section {
 }
 
 
-/* ================================================================
-   WHATSAPP FLOATING BUTTON
-   ================================================================ */
-.whatsapp-float {
-  position: fixed;
-  bottom: 92px;
-  right: 32px;
-  width: 52px;
-  height: 52px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
-  z-index: 800;
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
-}
-
-.whatsapp-float img {
-  width: 28px;
-  height: 28px;
-  filter: brightness(0) invert(1);
-}
-
-@media (max-width: 850px) {
-  .whatsapp-float {
-    bottom: 76px;
-    right: 20px;
-    width: 48px;
-    height: 48px;
-  }
-}
