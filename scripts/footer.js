@@ -24,7 +24,7 @@
             '<li><a href="' + base + '#founder" id="footerLinkFounder">Founder</a></li>' +
             '<li><a href="' + base + '#services" id="footerLinkServices">Practice Areas</a></li>' +
             '<li><a href="' + base + '#titleCareers" id="footerLinkCareers">Careers</a></li>' +
-            '<li><a href="' + base + 'contact/" id="footerLinkLocation">Our Office</a></li>' +
+            '<li><a href="' + base + 'contact/" id="footerLinkLocation">Contact</a></li>' +
           '</ul>' +
         '</div>' +
         '<div class="footer-col">' +
