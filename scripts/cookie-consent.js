@@ -112,7 +112,7 @@
 
     /* Mobile */
     "@media(max-width:600px){#cc-banner{bottom:12px;width:calc(100% - 24px);max-width:none;border-radius:14px}#cc-inner{padding:22px 20px 18px}#cc-buttons{flex-direction:column;gap:8px}#cc-title{font-size:1.05rem}.cc-category{padding:10px 8px}}",
-    "@media(max-width:850px){#cc-banner{bottom:72px}}"
+    "@media(max-width:850px){#cc-banner{bottom:12px}}"
   ].join("\n");
   document.head.appendChild(style);
 
