@@ -1146,8 +1146,8 @@ section {
 }
 
 @media (max-width: 850px) {
-  .footer {
-    display: none;
+  .footer-top {
+    flex-direction: column;
   }
 }
 
@@ -2213,6 +2213,9 @@ section {
 
 @media (max-width: 850px) {
   .whatsapp-float {
-    display: none;
+    bottom: 20px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
   }
 }
