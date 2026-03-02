@@ -1,8 +1,8 @@
 (function () {
   "use strict";
 
-  var lang = window.location.pathname.startsWith("/ka") ? "ka" : "en";
-  var base = "/" + lang + "/";
+  var lang = window.location.pathname.startsWith("/lbp.ge/ka") ? "ka" : "en";
+  var base = "/lbp.ge/" + lang + "/";
 
   // Desktop footer
   var footer = document.querySelector(".footer");
@@ -10,11 +10,11 @@
     footer.innerHTML =
       '<div class="footer-top">' +
         '<div class="footer-col footer-brand">' +
-          '<img src="/img/iconi.png" alt="LBP" class="footer-logo" />' +
+          '<img src="/lbp.ge/img/iconi.png" alt="LBP" class="footer-logo" />' +
           '<p id="footerAbout" class="footer-tagline">Legal &amp; Business Partners — Your trusted legal advisors in Georgia and beyond.</p>' +
           '<ul class="footer-social">' +
-            '<li><a href="https://www.linkedin.com/company/lbp-law-office/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><img src="/img/linked.svg" alt="LinkedIn" /></a></li>' +
-            '<li><a href="https://www.facebook.com/LBPLawOffice" target="_blank" rel="noopener noreferrer"><img src="/img/facebook.svg" alt="Facebook" /></a></li>' +
+            '<li><a href="https://www.linkedin.com/company/lbp-law-office/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><img src="/lbp.ge/img/linked.svg" alt="LinkedIn" /></a></li>' +
+            '<li><a href="https://www.facebook.com/LBPLawOffice" target="_blank" rel="noopener noreferrer"><img src="/lbp.ge/img/facebook.svg" alt="Facebook" /></a></li>' +
           '</ul>' +
         '</div>' +
         '<div class="footer-col">' +
@@ -37,11 +37,11 @@
         '<div class="footer-col">' +
           '<h4 class="footer-heading" id="footerContactHeading">Contact</h4>' +
           '<ul class="footer-contact">' +
-            '<li><img src="/img/email.svg" alt="" class="footer-icon" /><a href="mailto:info@lbp.ge">info@lbp.ge</a></li>' +
-            '<li><img src="/img/phone.svg" alt="" class="footer-icon" /><a href="tel:+995595223333">+995-595-223-333</a></li>' +
-            '<li><img src="/img/map.svg" alt="" class="footer-icon" /><span id="footerAddress">37m Ilia Chavchavadze Ave, Tbilisi 0179</span></li>' +
-            '<li><img src="/img/whatsapp.svg" alt="" class="footer-icon" /><a href="https://wa.me/12023912609" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>' +
-            '<li><img src="/img/telegram.svg" alt="" class="footer-icon" /><a href="https://t.me/FCCC27" target="_blank" rel="noopener noreferrer">Telegram</a></li>' +
+            '<li><img src="/lbp.ge/img/email.svg" alt="" class="footer-icon" /><a href="mailto:info@lbp.ge">info@lbp.ge</a></li>' +
+            '<li><img src="/lbp.ge/img/phone.svg" alt="" class="footer-icon" /><a href="tel:+995595223333">+995-595-223-333</a></li>' +
+            '<li><img src="/lbp.ge/img/map.svg" alt="" class="footer-icon" /><span id="footerAddress">37m Ilia Chavchavadze Ave, Tbilisi 0179</span></li>' +
+            '<li><img src="/lbp.ge/img/whatsapp.svg" alt="" class="footer-icon" /><a href="https://wa.me/12023912609" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>' +
+            '<li><img src="/lbp.ge/img/telegram.svg" alt="" class="footer-icon" /><a href="https://t.me/FCCC27" target="_blank" rel="noopener noreferrer">Telegram</a></li>' +
           '</ul>' +
         '</div>' +
       '</div>' +
@@ -60,12 +60,12 @@
   if (footerMobile) {
     footerMobile.innerHTML =
       '<ul class="footer-mobile-links">' +
-        '<li><a href="mailto:info@lbp.ge"><img src="/img/email.svg" alt="Email" /></a></li>' +
-        '<li><a href="tel:+995595223333"><img src="/img/phone.svg" alt="Phone" /></a></li>' +
-        '<li><a href="https://wa.me/12023912609" target="_blank" rel="noopener noreferrer"><img src="/img/whatsapp.svg" alt="WhatsApp" /></a></li>' +
-        '<li><a href="https://t.me/FCCC27" target="_blank" rel="noopener noreferrer"><img src="/img/telegram.svg" alt="Telegram" /></a></li>' +
-        '<li><a href="https://www.linkedin.com/company/lbp-law-office/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><img src="/img/linked.svg" alt="LinkedIn" /></a></li>' +
-        '<li><a href="https://www.facebook.com/LBPLawOffice" target="_blank" rel="noopener noreferrer"><img src="/img/facebook.svg" alt="Facebook" /></a></li>' +
+        '<li><a href="mailto:info@lbp.ge"><img src="/lbp.ge/img/email.svg" alt="Email" /></a></li>' +
+        '<li><a href="tel:+995595223333"><img src="/lbp.ge/img/phone.svg" alt="Phone" /></a></li>' +
+        '<li><a href="https://wa.me/12023912609" target="_blank" rel="noopener noreferrer"><img src="/lbp.ge/img/whatsapp.svg" alt="WhatsApp" /></a></li>' +
+        '<li><a href="https://t.me/FCCC27" target="_blank" rel="noopener noreferrer"><img src="/lbp.ge/img/telegram.svg" alt="Telegram" /></a></li>' +
+        '<li><a href="https://www.linkedin.com/company/lbp-law-office/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><img src="/lbp.ge/img/linked.svg" alt="LinkedIn" /></a></li>' +
+        '<li><a href="https://www.facebook.com/LBPLawOffice" target="_blank" rel="noopener noreferrer"><img src="/lbp.ge/img/facebook.svg" alt="Facebook" /></a></li>' +
       '</ul>';
   }
 })();

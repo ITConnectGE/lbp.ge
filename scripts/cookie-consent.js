@@ -3,12 +3,12 @@
 
   if (localStorage.getItem("cookie-consent")) return;
 
-  var lang = window.location.pathname.startsWith("/ka") ? "ka" : "en";
+  var lang = window.location.pathname.startsWith("/lbp.ge/ka") ? "ka" : "en";
 
   var t = {
     en: {
       title: "Cookie Preferences",
-      text: 'We use cookies to improve your browsing experience and analyze site traffic via Google Analytics. Choose your preference below. <a href="/' + lang + '/cookie-policy/" style="color:rgba(201,167,108,.9);text-decoration:underline">Learn more</a>',
+      text: 'We use cookies to improve your browsing experience and analyze site traffic via Google Analytics. Choose your preference below. <a href="/lbp.ge/' + lang + '/cookie-policy/" style="color:rgba(201,167,108,.9);text-decoration:underline">Learn more</a>',
       accept: "Accept All",
       reject: "Reject All",
       manage: "Manage Preferences",
@@ -21,7 +21,7 @@
     },
     ka: {
       title: "ქუქი-ფაილების პარამეტრები",
-      text: 'ჩვენ ვიყენებთ ქუქი-ფაილებს ბრაუზინგის გამოცდილების გასაუმჯობესებლად და საიტის ტრაფიკის ანალიზისთვის Google Analytics-ის მეშვეობით. აირჩიეთ თქვენი პარამეტრები ქვემოთ. <a href="/' + lang + '/cookie-policy/" style="color:rgba(201,167,108,.9);text-decoration:underline">გაიგეთ მეტი</a>',
+      text: 'ჩვენ ვიყენებთ ქუქი-ფაილებს ბრაუზინგის გამოცდილების გასაუმჯობესებლად და საიტის ტრაფიკის ანალიზისთვის Google Analytics-ის მეშვეობით. აირჩიეთ თქვენი პარამეტრები ქვემოთ. <a href="/lbp.ge/' + lang + '/cookie-policy/" style="color:rgba(201,167,108,.9);text-decoration:underline">გაიგეთ მეტი</a>',
       accept: "ყველას მიღება",
       reject: "ყველას უარყოფა",
       manage: "პარამეტრების მართვა",
