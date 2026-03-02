@@ -154,8 +154,6 @@ a::after {
 .header.scrolled {
   height: var(--header-height-compact);
   background: rgba(13, 27, 42, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 }
 
