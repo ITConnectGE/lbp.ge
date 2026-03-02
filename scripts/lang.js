@@ -315,6 +315,14 @@ function applyText(languageData) {
   if (contactPageQRTitle) contactPageQRTitle.textContent = languageData.contactPageQRTitle;
   const contactPageQRDesc = document.querySelector("#contactPageQRDesc");
   if (contactPageQRDesc) contactPageQRDesc.textContent = languageData.contactPageQRDesc;
+  const contactPageWhatsApp = document.querySelector("#contactPageWhatsApp");
+  if (contactPageWhatsApp) contactPageWhatsApp.textContent = languageData.contactPageWhatsApp;
+  const contactPageTelegram = document.querySelector("#contactPageTelegram");
+  if (contactPageTelegram) contactPageTelegram.textContent = languageData.contactPageTelegram;
+  const contactPageSignal = document.querySelector("#contactPageSignal");
+  if (contactPageSignal) contactPageSignal.textContent = languageData.contactPageSignal;
+  const contactPageMessengers = document.querySelector("#contactPageMessengers");
+  if (contactPageMessengers) contactPageMessengers.textContent = languageData.contactPageMessengers;
 
   // Stats
   const statCases = document.querySelector("#statCases");

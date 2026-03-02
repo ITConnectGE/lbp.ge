@@ -124,7 +124,8 @@
 	"contactPageCTA": "Send us an Email",
 	"contactPageWhatsApp": "WhatsApp",
 	"contactPageTelegram": "Telegram",
-	"contactPageMessengers": "You can also contact us directly via WhatsApp or Telegram for a quick response.",
+	"contactPageSignal": "Signal",
+	"contactPageMessengers": "You can also contact us directly via WhatsApp, Telegram, or Signal for a quick response.",
 	"contactPageMapTitle": "Find Us",
 	"contactPageDirections": "Get Directions",
 	"contactPageQRTitle": "Save Our Contact",
@@ -173,7 +174,7 @@
 
 	"faqTitle": "Frequently Asked Questions",
 	"faqQ1": "How do I schedule a consultation with LBP?",
-	"faqA1": "You can schedule a consultation by emailing us at info@lbp.ge, calling +995-595-223-333, or reaching out via WhatsApp or Telegram. We typically respond within one business day.",
+	"faqA1": "You can schedule a consultation by emailing us at info@lbp.ge, calling +995-595-223-333, or reaching out via WhatsApp, Telegram, or Signal. We typically respond within one business day.",
 	"faqQ2": "What areas of law does LBP cover?",
 	"faqA2": "LBP covers 15+ practice areas including corporate law, criminal law, labor law, crypto and digital assets, IP and personal data, investment and real estate, litigation, sports law, and more.",
 	"faqQ3": "Does LBP work with international clients?",
