@@ -1,0 +1,343 @@
+// Vacancies / Careers page styles
+
+.vacancies-intro {
+  padding: 40px 0 0;
+  text-align: center;
+
+  .vacancies-subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+  }
+}
+
+// Why Work at LBP section
+.vacancies-why {
+  padding: 40px 0;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.why-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 28px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: box-shadow var(--transition), transform var(--transition);
+  border-top: 3px solid var(--color-accent);
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+  }
+
+  .why-icon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+  }
+}
+
+// Vacancy cards
+.vacancies-list {
+  padding: 40px 0;
+}
+
+.vacancies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 32px;
+  margin-top: 16px;
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vacancy-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+
+  .vacancy-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .vacancy-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .vacancy-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .vacancy-dept {
+    padding: 4px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .vacancy-type {
+    padding: 4px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  .vacancy-desc {
+    padding: 24px 32px 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+  }
+
+  .vacancy-responsibilities {
+    padding: 16px 32px 0;
+
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 8px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      li {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: var(--color-text-secondary);
+        padding-left: 20px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: var(--color-accent);
+        }
+      }
+    }
+  }
+
+  .vacancy-apply-btn {
+    display: inline-block;
+    align-self: flex-start;
+    margin: 24px 32px 28px;
+    padding: 12px 32px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      background: var(--color-accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+  }
+}
+
+// Application form section
+.vacancies-form-section {
+  padding: 60px 0 40px;
+
+  .vacancies-form-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+  }
+}
+
+.vacancies-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      color: var(--color-text);
+      background: var(--color-bg);
+      transition: border-color var(--transition), box-shadow var(--transition);
+
+      &:focus {
+        outline: none;
+        border-color: var(--color-accent);
+        box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.15);
+      }
+    }
+
+    input[type="file"] {
+      padding: 10px 0;
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+  }
+
+  .button {
+    align-self: flex-start;
+    padding: 14px 36px;
+  }
+}
+
+.vacancies-form-note {
+  text-align: center;
+  max-width: 600px;
+  margin: 24px auto 0;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+
+  a {
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+}
+
+// Dark mode overrides
+[data-theme="dark"] {
+  .vacancy-card .vacancy-responsibilities h3 {
+    color: var(--color-text);
+  }
+
+  .why-card h3 {
+    color: var(--color-text);
+  }
+
+  .vacancies-form .form-group label {
+    color: var(--color-text);
+  }
+}
+
+// Responsive
+@media (max-width: 600px) {
+  .vacancies-intro .vacancies-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .vacancy-card {
+    .vacancy-header {
+      padding: 20px 24px;
+    }
+
+    .vacancy-desc {
+      padding: 20px 24px 0;
+    }
+
+    .vacancy-responsibilities {
+      padding: 12px 24px 0;
+    }
+
+    .vacancy-apply-btn {
+      margin: 20px 24px 24px;
+    }
+  }
+
+  .vacancies-form {
+    padding: 24px;
+  }
+}

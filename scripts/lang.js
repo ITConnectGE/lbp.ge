@@ -97,11 +97,8 @@ function applyText(languageData) {
   if (listType13) listType13.textContent = languageData.listType13;
   const listType14 = document.querySelector("#listType14");
   if (listType14) listType14.textContent = languageData.listType14;
-  const listType15 = document.querySelector("#listType15");
-  if (listType15) listType15.textContent = languageData.listType15;
-
   // Practice area descriptions
-  for (var d = 1; d <= 15; d++) {
+  for (var d = 1; d <= 14; d++) {
     var desc = document.querySelector("#descType" + d);
     if (desc) desc.textContent = languageData["descType" + d];
   }
@@ -387,6 +384,73 @@ function applyText(languageData) {
   if (blogCardExcerpt1) blogCardExcerpt1.textContent = languageData.blogCardExcerpt1;
   var blogCardExcerpt2 = document.querySelector("#blogCardExcerpt2");
   if (blogCardExcerpt2) blogCardExcerpt2.textContent = languageData.blogCardExcerpt2;
+
+  // Vacancies page
+  var vacanciesPageTitle = document.querySelector("#vacanciesPageTitle");
+  if (vacanciesPageTitle) vacanciesPageTitle.textContent = languageData.vacanciesPageTitle;
+  var vacanciesPageSubtitle = document.querySelector("#vacanciesPageSubtitle");
+  if (vacanciesPageSubtitle) vacanciesPageSubtitle.textContent = languageData.vacanciesPageSubtitle;
+  var vacanciesOpenPositions = document.querySelector("#vacanciesOpenPositions");
+  if (vacanciesOpenPositions) vacanciesOpenPositions.textContent = languageData.vacanciesOpenPositions;
+
+  for (var v = 1; v <= 2; v++) {
+    var vTitle = document.querySelector("#vacancy" + v + "Title");
+    if (vTitle) vTitle.textContent = languageData["vacancy" + v + "Title"];
+    var vDept = document.querySelector("#vacancy" + v + "Dept");
+    if (vDept) vDept.textContent = languageData["vacancy" + v + "Dept"];
+    var vType = document.querySelector("#vacancy" + v + "Type");
+    if (vType) vType.textContent = languageData["vacancy" + v + "Type"];
+    var vDesc = document.querySelector("#vacancy" + v + "Desc");
+    if (vDesc) vDesc.textContent = languageData["vacancy" + v + "Desc"];
+    var vRespTitle = document.querySelector("#vacancy" + v + "RespTitle");
+    if (vRespTitle) vRespTitle.textContent = languageData["vacancy" + v + "RespTitle"];
+    for (var r = 1; r <= 5; r++) {
+      var vResp = document.querySelector("#vacancy" + v + "Resp" + r);
+      if (vResp) vResp.textContent = languageData["vacancy" + v + "Resp" + r];
+    }
+    var vApply = document.querySelector("#vacancy" + v + "ApplyBtn");
+    if (vApply) vApply.textContent = languageData["vacancy" + v + "ApplyBtn"];
+  }
+
+  var vacanciesFormTitle = document.querySelector("#vacanciesFormTitle");
+  if (vacanciesFormTitle) vacanciesFormTitle.textContent = languageData.vacanciesFormTitle;
+  var vacanciesFormSubtitle = document.querySelector("#vacanciesFormSubtitle");
+  if (vacanciesFormSubtitle) vacanciesFormSubtitle.textContent = languageData.vacanciesFormSubtitle;
+  var vacanciesFormName = document.querySelector("#vacanciesFormName");
+  if (vacanciesFormName) vacanciesFormName.textContent = languageData.vacanciesFormName;
+  var vacanciesFormEmail = document.querySelector("#vacanciesFormEmail");
+  if (vacanciesFormEmail) vacanciesFormEmail.textContent = languageData.vacanciesFormEmail;
+  var vacanciesFormPhone = document.querySelector("#vacanciesFormPhone");
+  if (vacanciesFormPhone) vacanciesFormPhone.textContent = languageData.vacanciesFormPhone;
+  var vacanciesFormPosition = document.querySelector("#vacanciesFormPosition");
+  if (vacanciesFormPosition) vacanciesFormPosition.textContent = languageData.vacanciesFormPosition;
+  var vacanciesFormPositionDefault = document.querySelector("#vacanciesFormPositionDefault");
+  if (vacanciesFormPositionDefault) vacanciesFormPositionDefault.textContent = languageData.vacanciesFormPositionDefault;
+  var vacanciesFormPositionOpt1 = document.querySelector("#vacanciesFormPositionOpt1");
+  if (vacanciesFormPositionOpt1) vacanciesFormPositionOpt1.textContent = languageData.vacanciesFormPositionOpt1;
+  var vacanciesFormPositionOpt2 = document.querySelector("#vacanciesFormPositionOpt2");
+  if (vacanciesFormPositionOpt2) vacanciesFormPositionOpt2.textContent = languageData.vacanciesFormPositionOpt2;
+  var vacanciesFormCover = document.querySelector("#vacanciesFormCover");
+  if (vacanciesFormCover) vacanciesFormCover.textContent = languageData.vacanciesFormCover;
+  var vacanciesFormResume = document.querySelector("#vacanciesFormResume");
+  if (vacanciesFormResume) vacanciesFormResume.textContent = languageData.vacanciesFormResume;
+  var vacanciesFormSubmit = document.querySelector("#vacanciesFormSubmit");
+  if (vacanciesFormSubmit) vacanciesFormSubmit.textContent = languageData.vacanciesFormSubmit;
+  var vacanciesFormNote = document.querySelector("#vacanciesFormNote");
+  if (vacanciesFormNote) vacanciesFormNote.innerHTML = languageData.vacanciesFormNote.replace("info@lbp.ge", '<a href="mailto:info@lbp.ge">info@lbp.ge</a>');
+
+  var vacanciesViewBtn = document.querySelector("#vacanciesViewBtn");
+  if (vacanciesViewBtn) vacanciesViewBtn.textContent = languageData.vacanciesViewBtn;
+
+  // Why work at LBP
+  var vacanciesWhyTitle = document.querySelector("#vacanciesWhyTitle");
+  if (vacanciesWhyTitle) vacanciesWhyTitle.textContent = languageData.vacanciesWhyTitle;
+  for (var w = 1; w <= 4; w++) {
+    var wTitle = document.querySelector("#vacanciesWhy" + w + "Title");
+    if (wTitle) wTitle.textContent = languageData["vacanciesWhy" + w + "Title"];
+    var wDesc = document.querySelector("#vacanciesWhy" + w + "Desc");
+    if (wDesc) wDesc.textContent = languageData["vacanciesWhy" + w + "Desc"];
+  }
 }
 
 function changeLanguage(language) {
