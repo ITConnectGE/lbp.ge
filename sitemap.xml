@@ -100,6 +100,62 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://lbp.ge/en/vacancies/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/vacancies/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/vacancies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/vacancies/" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/ka/vacancies/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/vacancies/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/vacancies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/vacancies/" />
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/en/vacancies/administraciuli-asistenti/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/vacancies/administraciuli-asistenti/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/vacancies/administraciuli-asistenti/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/vacancies/administraciuli-asistenti/" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/ka/vacancies/administraciuli-asistenti/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/vacancies/administraciuli-asistenti/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/vacancies/administraciuli-asistenti/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/vacancies/administraciuli-asistenti/" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/en/vacancies/iuridiuli-mkvlevari/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/vacancies/iuridiuli-mkvlevari/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/vacancies/iuridiuli-mkvlevari/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/vacancies/iuridiuli-mkvlevari/" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/ka/vacancies/iuridiuli-mkvlevari/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/vacancies/iuridiuli-mkvlevari/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/vacancies/iuridiuli-mkvlevari/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/vacancies/iuridiuli-mkvlevari/" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/en/vacancies/marketingis-spetsialisti/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/vacancies/marketingis-spetsialisti/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/vacancies/marketingis-spetsialisti/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/vacancies/marketingis-spetsialisti/" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lbp.ge/ka/vacancies/marketingis-spetsialisti/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/vacancies/marketingis-spetsialisti/" />
+    <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/vacancies/marketingis-spetsialisti/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/vacancies/marketingis-spetsialisti/" />
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://lbp.ge/en/privacy-policy/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://lbp.ge/en/privacy-policy/" />
     <xhtml:link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/privacy-policy/" />

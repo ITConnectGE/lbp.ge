@@ -22,7 +22,7 @@
           '<ul class="footer-links">' +
             '<li><a href="' + base + '#about" id="footerLinkAbout">About</a></li>' +
             '<li><a href="' + base + '#founder" id="footerLinkFounder">Founder</a></li>' +
-            '<li><a href="' + base + '#services" id="footerLinkServices">Practice Areas</a></li>' +
+            '<li><a href="' + base + '#services" id="footerLinkServices">Services</a></li>' +
             '<li><a href="' + base + 'vacancies/" id="footerLinkCareers">Careers</a></li>' +
             '<li><a href="' + base + 'contact/" id="footerLinkLocation">Contact</a></li>' +
           '</ul>' +
@@ -42,7 +42,6 @@
             '<li><img src="/img/map.svg" alt="" class="footer-icon" /><span id="footerAddress">37m Ilia Chavchavadze Ave, Tbilisi 0179</span></li>' +
             '<li><img src="/img/whatsapp.svg" alt="" class="footer-icon" /><a href="https://wa.me/12023912609" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>' +
             '<li><img src="/img/telegram.svg" alt="" class="footer-icon" /><a href="https://t.me/FCCC27" target="_blank" rel="noopener noreferrer">Telegram</a></li>' +
-            '<li><img src="/img/signal.svg" alt="" class="footer-icon" /><a href="https://signal.me/#p/+995595223333" target="_blank" rel="noopener noreferrer">Signal</a></li>' +
           '</ul>' +
         '</div>' +
       '</div>' +
@@ -65,7 +64,6 @@
         '<li><a href="tel:+995595223333"><img src="/img/phone.svg" alt="Phone" /></a></li>' +
         '<li><a href="https://wa.me/12023912609" target="_blank" rel="noopener noreferrer"><img src="/img/whatsapp.svg" alt="WhatsApp" /></a></li>' +
         '<li><a href="https://t.me/FCCC27" target="_blank" rel="noopener noreferrer"><img src="/img/telegram.svg" alt="Telegram" /></a></li>' +
-        '<li><a href="https://signal.me/#p/+995595223333" target="_blank" rel="noopener noreferrer"><img src="/img/signal.svg" alt="Signal" /></a></li>' +
         '<li><a href="https://www.linkedin.com/company/lbp-law-office/?viewAsMember=true" target="_blank" rel="noopener noreferrer"><img src="/img/linked.svg" alt="LinkedIn" /></a></li>' +
         '<li><a href="https://www.facebook.com/LBPLawOffice" target="_blank" rel="noopener noreferrer"><img src="/img/facebook.svg" alt="Facebook" /></a></li>' +
       '</ul>';

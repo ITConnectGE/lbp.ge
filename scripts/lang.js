@@ -97,6 +97,7 @@ function applyText(languageData) {
   if (listType13) listType13.textContent = languageData.listType13;
   const listType14 = document.querySelector("#listType14");
   if (listType14) listType14.textContent = languageData.listType14;
+
   // Practice area descriptions
   for (var d = 1; d <= 14; d++) {
     var desc = document.querySelector("#descType" + d);
@@ -312,14 +313,6 @@ function applyText(languageData) {
   if (contactPageQRTitle) contactPageQRTitle.textContent = languageData.contactPageQRTitle;
   const contactPageQRDesc = document.querySelector("#contactPageQRDesc");
   if (contactPageQRDesc) contactPageQRDesc.textContent = languageData.contactPageQRDesc;
-  const contactPageWhatsApp = document.querySelector("#contactPageWhatsApp");
-  if (contactPageWhatsApp) contactPageWhatsApp.textContent = languageData.contactPageWhatsApp;
-  const contactPageTelegram = document.querySelector("#contactPageTelegram");
-  if (contactPageTelegram) contactPageTelegram.textContent = languageData.contactPageTelegram;
-  const contactPageSignal = document.querySelector("#contactPageSignal");
-  if (contactPageSignal) contactPageSignal.textContent = languageData.contactPageSignal;
-  const contactPageMessengers = document.querySelector("#contactPageMessengers");
-  if (contactPageMessengers) contactPageMessengers.textContent = languageData.contactPageMessengers;
 
   // Stats
   const statCases = document.querySelector("#statCases");
@@ -385,72 +378,107 @@ function applyText(languageData) {
   var blogCardExcerpt2 = document.querySelector("#blogCardExcerpt2");
   if (blogCardExcerpt2) blogCardExcerpt2.textContent = languageData.blogCardExcerpt2;
 
-  // Vacancies page
-  var vacanciesPageTitle = document.querySelector("#vacanciesPageTitle");
-  if (vacanciesPageTitle) vacanciesPageTitle.textContent = languageData.vacanciesPageTitle;
-  var vacanciesPageSubtitle = document.querySelector("#vacanciesPageSubtitle");
-  if (vacanciesPageSubtitle) vacanciesPageSubtitle.textContent = languageData.vacanciesPageSubtitle;
-  var vacanciesOpenPositions = document.querySelector("#vacanciesOpenPositions");
-  if (vacanciesOpenPositions) vacanciesOpenPositions.textContent = languageData.vacanciesOpenPositions;
+  // Vacancies
+  var vacanciesTitle = document.querySelector("#vacanciesTitle");
+  if (vacanciesTitle) vacanciesTitle.textContent = languageData.vacanciesTitle;
+  var vacanciesIntro = document.querySelector("#vacanciesIntro");
+  if (vacanciesIntro) vacanciesIntro.textContent = languageData.vacanciesIntro;
+  var viewVacancies = document.querySelector("#viewVacancies");
+  if (viewVacancies) viewVacancies.textContent = languageData.viewVacancies;
 
-  for (var v = 1; v <= 2; v++) {
-    var vTitle = document.querySelector("#vacancy" + v + "Title");
-    if (vTitle) vTitle.textContent = languageData["vacancy" + v + "Title"];
-    var vDept = document.querySelector("#vacancy" + v + "Dept");
-    if (vDept) vDept.textContent = languageData["vacancy" + v + "Dept"];
-    var vType = document.querySelector("#vacancy" + v + "Type");
-    if (vType) vType.textContent = languageData["vacancy" + v + "Type"];
-    var vDesc = document.querySelector("#vacancy" + v + "Desc");
-    if (vDesc) vDesc.textContent = languageData["vacancy" + v + "Desc"];
-    var vRespTitle = document.querySelector("#vacancy" + v + "RespTitle");
-    if (vRespTitle) vRespTitle.textContent = languageData["vacancy" + v + "RespTitle"];
-    for (var r = 1; r <= 5; r++) {
-      var vResp = document.querySelector("#vacancy" + v + "Resp" + r);
-      if (vResp) vResp.textContent = languageData["vacancy" + v + "Resp" + r];
+  // Vacancy table columns
+  var vacancyColPosition = document.querySelector("#vacancyColPosition");
+  if (vacancyColPosition) vacancyColPosition.textContent = languageData.vacancyColPosition;
+  var vacancyColType = document.querySelector("#vacancyColType");
+  if (vacancyColType) vacancyColType.textContent = languageData.vacancyColType;
+  var vacancyColDeadline = document.querySelector("#vacancyColDeadline");
+  if (vacancyColDeadline) vacancyColDeadline.textContent = languageData.vacancyColDeadline;
+
+  // Vacancy rows (listing page)
+  var vacancyAdmin = document.querySelector("#vacancyAdmin");
+  if (vacancyAdmin) vacancyAdmin.textContent = languageData.vacancyAdmin;
+  var vacancyResearcher = document.querySelector("#vacancyResearcher");
+  if (vacancyResearcher) vacancyResearcher.textContent = languageData.vacancyResearcher;
+  var vacancyAdminDeadline = document.querySelector("#vacancyAdminDeadline");
+  if (vacancyAdminDeadline) vacancyAdminDeadline.textContent = languageData.vacancyAdminDeadline;
+  var vacancyResearcherDeadline = document.querySelector("#vacancyResearcherDeadline");
+  if (vacancyResearcherDeadline) vacancyResearcherDeadline.textContent = languageData.vacancyResearcherDeadline;
+
+  // Marketing vacancy
+  var vacancyMarketing = document.querySelector("#vacancyMarketing");
+  if (vacancyMarketing) vacancyMarketing.textContent = languageData.vacancyMarketing;
+  var vacancyMarketingDeadline = document.querySelector("#vacancyMarketingDeadline");
+  if (vacancyMarketingDeadline) vacancyMarketingDeadline.textContent = languageData.vacancyMarketingDeadline;
+  var vacancyMarketingType = document.querySelector("#vacancyMarketingType");
+  if (vacancyMarketingType) vacancyMarketingType.textContent = languageData.vacancyTypePart;
+
+  // Vacancy detail page type (for part-time pages)
+  var vacancyDetailType = document.querySelector("#vacancyDetailType");
+  if (vacancyDetailType) vacancyDetailType.textContent = languageData.vacancyTypePart;
+
+  // Vacancy table meta
+  document.querySelectorAll(".vacancy-type").forEach(function(el) {
+    el.textContent = languageData.vacancyTypeFull;
+  });
+  document.querySelectorAll(".vacancy-learn-more").forEach(function(el) {
+    el.textContent = languageData.vacancyLearnMore;
+  });
+
+  // Vacancy detail page
+  var vacancyDetailTitle = document.querySelector("#vacancyDetailTitle");
+  if (vacancyDetailTitle) {
+    var key = vacancyDetailTitle.getAttribute("data-key");
+    if (key && languageData[key]) vacancyDetailTitle.textContent = languageData[key];
+  }
+  document.querySelectorAll(".vacancy-detail-location").forEach(function(el) {
+    el.textContent = languageData.vacancyLocation;
+  });
+  document.querySelectorAll(".vacancy-detail-type").forEach(function(el) {
+    el.textContent = languageData.vacancyTypeFull;
+  });
+
+  // Vacancy detail sections
+  var sectionKeys = ["AboutTitle", "About", "RespTitle", "ReqTitle", "OfferTitle"];
+  var vacancyPrefixes = ["vacancyAdmin", "vacancyResearcher", "vacancyMarketing"];
+  vacancyPrefixes.forEach(function(prefix) {
+    sectionKeys.forEach(function(key) {
+      var el = document.querySelector("#" + prefix + key);
+      if (el && languageData[prefix + key]) {
+        el.textContent = languageData[prefix + key];
+      }
+    });
+    // Responsibilities list items
+    for (var r = 1; r <= 7; r++) {
+      var respEl = document.querySelector("#" + prefix + "Resp" + r);
+      if (respEl && languageData[prefix + "Resp" + r]) {
+        respEl.textContent = languageData[prefix + "Resp" + r];
+      }
     }
-    var vApply = document.querySelector("#vacancy" + v + "ApplyBtn");
-    if (vApply) vApply.textContent = languageData["vacancy" + v + "ApplyBtn"];
-  }
+    // Requirements list items
+    for (var q = 1; q <= 6; q++) {
+      var reqEl = document.querySelector("#" + prefix + "Req" + q);
+      if (reqEl && languageData[prefix + "Req" + q]) {
+        reqEl.textContent = languageData[prefix + "Req" + q];
+      }
+    }
+    // What We Offer list items
+    for (var o = 1; o <= 5; o++) {
+      var offerEl = document.querySelector("#" + prefix + "Offer" + o);
+      if (offerEl && languageData[prefix + "Offer" + o]) {
+        offerEl.textContent = languageData[prefix + "Offer" + o];
+      }
+    }
+  });
 
-  var vacanciesFormTitle = document.querySelector("#vacanciesFormTitle");
-  if (vacanciesFormTitle) vacanciesFormTitle.textContent = languageData.vacanciesFormTitle;
-  var vacanciesFormSubtitle = document.querySelector("#vacanciesFormSubtitle");
-  if (vacanciesFormSubtitle) vacanciesFormSubtitle.textContent = languageData.vacanciesFormSubtitle;
-  var vacanciesFormName = document.querySelector("#vacanciesFormName");
-  if (vacanciesFormName) vacanciesFormName.textContent = languageData.vacanciesFormName;
-  var vacanciesFormEmail = document.querySelector("#vacanciesFormEmail");
-  if (vacanciesFormEmail) vacanciesFormEmail.textContent = languageData.vacanciesFormEmail;
-  var vacanciesFormPhone = document.querySelector("#vacanciesFormPhone");
-  if (vacanciesFormPhone) vacanciesFormPhone.textContent = languageData.vacanciesFormPhone;
-  var vacanciesFormPosition = document.querySelector("#vacanciesFormPosition");
-  if (vacanciesFormPosition) vacanciesFormPosition.textContent = languageData.vacanciesFormPosition;
-  var vacanciesFormPositionDefault = document.querySelector("#vacanciesFormPositionDefault");
-  if (vacanciesFormPositionDefault) vacanciesFormPositionDefault.textContent = languageData.vacanciesFormPositionDefault;
-  var vacanciesFormPositionOpt1 = document.querySelector("#vacanciesFormPositionOpt1");
-  if (vacanciesFormPositionOpt1) vacanciesFormPositionOpt1.textContent = languageData.vacanciesFormPositionOpt1;
-  var vacanciesFormPositionOpt2 = document.querySelector("#vacanciesFormPositionOpt2");
-  if (vacanciesFormPositionOpt2) vacanciesFormPositionOpt2.textContent = languageData.vacanciesFormPositionOpt2;
-  var vacanciesFormCover = document.querySelector("#vacanciesFormCover");
-  if (vacanciesFormCover) vacanciesFormCover.textContent = languageData.vacanciesFormCover;
-  var vacanciesFormResume = document.querySelector("#vacanciesFormResume");
-  if (vacanciesFormResume) vacanciesFormResume.textContent = languageData.vacanciesFormResume;
-  var vacanciesFormSubmit = document.querySelector("#vacanciesFormSubmit");
-  if (vacanciesFormSubmit) vacanciesFormSubmit.textContent = languageData.vacanciesFormSubmit;
-  var vacanciesFormNote = document.querySelector("#vacanciesFormNote");
-  if (vacanciesFormNote) vacanciesFormNote.innerHTML = languageData.vacanciesFormNote.replace("info@lbp.ge", '<a href="mailto:info@lbp.ge">info@lbp.ge</a>');
+  // Vacancy detail deadline label
+  var vacancyDeadlineLabel = document.querySelector("#vacancyDeadlineLabel");
+  if (vacancyDeadlineLabel) vacancyDeadlineLabel.textContent = languageData.vacancyDeadlineLabel;
 
-  var vacanciesViewBtn = document.querySelector("#vacanciesViewBtn");
-  if (vacanciesViewBtn) vacanciesViewBtn.textContent = languageData.vacanciesViewBtn;
-
-  // Why work at LBP
-  var vacanciesWhyTitle = document.querySelector("#vacanciesWhyTitle");
-  if (vacanciesWhyTitle) vacanciesWhyTitle.textContent = languageData.vacanciesWhyTitle;
-  for (var w = 1; w <= 4; w++) {
-    var wTitle = document.querySelector("#vacanciesWhy" + w + "Title");
-    if (wTitle) wTitle.textContent = languageData["vacanciesWhy" + w + "Title"];
-    var wDesc = document.querySelector("#vacanciesWhy" + w + "Desc");
-    if (wDesc) wDesc.textContent = languageData["vacanciesWhy" + w + "Desc"];
-  }
+  // Vacancy apply section
+  var formTitle = document.querySelector("#formTitle");
+  if (formTitle) formTitle.textContent = languageData.formTitle;
+  var formApplyText = document.querySelector("#formApplyText");
+  if (formApplyText) formApplyText.innerHTML = languageData.formApplyText;
 }
 
 function changeLanguage(language) {
