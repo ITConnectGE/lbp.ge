@@ -39,7 +39,7 @@
           '<ul class="footer-contact">' +
             '<li><img src="/img/email.svg" alt="" class="footer-icon" /><a href="mailto:info@lbp.ge">info@lbp.ge</a></li>' +
             '<li><img src="/img/phone.svg" alt="" class="footer-icon" /><a href="tel:+995595223333">+995-595-223-333</a></li>' +
-            '<li><img src="/img/map.svg" alt="" class="footer-icon" /><span id="footerAddress">37m Ilia Chavchavadze Ave, Tbilisi 0179</span></li>' +
+            '<li><img src="/img/map.svg" alt="" class="footer-icon" /><a href="https://maps.app.goo.gl/AnhwgwAYG85u4NQQ8" target="_blank" id="footerAddress">37m Ilia Chavchavadze Ave, Tbilisi 0179</a></li>' +
             '<li><img src="/img/whatsapp.svg" alt="" class="footer-icon" /><a href="https://wa.me/12023912609" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>' +
             '<li><img src="/img/telegram.svg" alt="" class="footer-icon" /><a href="https://t.me/FCCC27" target="_blank" rel="noopener noreferrer">Telegram</a></li>' +
             '<li><img src="/img/signal.svg" alt="" class="footer-icon" /><a href="https://signal.me/#p/+995595223333" target="_blank" rel="noopener noreferrer">Signal</a></li>' +
