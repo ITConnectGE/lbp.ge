@@ -2563,7 +2563,7 @@ section {
   position: relative;
   z-index: 1;
   width: 65%;
-  max-width: 700px;
+  max-width: 300px;
   height: auto;
   -webkit-mask-image: radial-gradient(ellipse, #000 25%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.2) 90%, transparent 100%);
   mask-image: radial-gradient(ellipse, #000 25%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.2) 90%, transparent 100%);
