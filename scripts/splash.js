@@ -2,7 +2,7 @@
   var key = "lbpSplashShownAt";
   var last = parseInt(localStorage.getItem(key) || "0", 10);
 
-  if (Date.now() - last < 6 * 60 * 60 * 1000) {
+  if (Date.now() - last < 10) {
     document.documentElement.setAttribute("data-splash", "skip");
   } else {
     document.documentElement.setAttribute("data-splash", "show");
