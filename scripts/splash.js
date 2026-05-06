@@ -22,6 +22,6 @@
         if (splash.parentNode) splash.parentNode.removeChild(splash);
         document.documentElement.removeAttribute("data-splash");
       }, 400);
-    }, 2000);
+    }, 4000);
   });
 })();
