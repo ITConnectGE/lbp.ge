@@ -1618,6 +1618,67 @@ section {
 
 
 /* ================================================================
+   FLOATING CONTACT ICONS (WhatsApp / Telegram)
+   ================================================================ */
+.floating-contacts {
+  position: fixed;
+  bottom: 32px;
+  left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 800;
+}
+
+.floating-contact {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), box-shadow var(--transition);
+  background: #fff;
+}
+
+.floating-contact img {
+  width: 30px;
+  height: 30px;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.floating-contact--whatsapp {
+  background: #25d366;
+}
+
+.floating-contact--telegram {
+  background: #229ed9;
+}
+
+.floating-contact:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 850px) {
+  .floating-contacts {
+    bottom: 20px;
+    left: 20px;
+    gap: 10px;
+  }
+  .floating-contact {
+    width: 44px;
+    height: 44px;
+  }
+  .floating-contact img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* ================================================================
    BACK TO TOP BUTTON
    ================================================================ */
 .back-to-top {
