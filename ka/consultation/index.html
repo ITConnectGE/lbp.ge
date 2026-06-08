@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="მოითხოვე იურიდიული კონსულტაცია LBP-სგან. შეავსე მოკლე ფორმა და ჩვენი წარმომადგენელი მალე დაგიკავშირდებათ." />
+    <link rel="canonical" href="https://lbp.ge/ka/consultation/" />
+    <link rel="alternate" hreflang="en" href="https://lbp.ge/en/consultation/" />
+    <link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/consultation/" />
+    <link rel="alternate" hreflang="x-default" href="https://lbp.ge/en/consultation/" />
+    <meta property="og:title" content="კონსულტაციის მიღება — LBP" />
+    <meta property="og:description" content="მოითხოვე იურიდიული კონსულტაცია LBP-სგან." />
+    <meta property="og:url" content="https://lbp.ge/ka/consultation/" />
+    <link rel="shortcut icon" href="/img/iconi.png" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>კონსულტაციის მიღება — LBP</title>
+    <style>
+      .consultation-page { padding: 80px 0; }
+      .consultation-page .section-title { margin-bottom: 32px; }
+      .consultation-form {
+        max-width: 640px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 40px;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .consultation-form label {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        font-weight: 600;
+        color: var(--color-text);
+        font-size: 0.95rem;
+      }
+      .consultation-form input,
+      .consultation-form textarea,
+      .consultation-form select {
+        padding: 12px 14px;
+        border: 1px solid var(--color-border, #d0d4d9);
+        border-radius: var(--radius-sm, 8px);
+        font-family: inherit;
+        font-size: 1rem;
+        background: var(--color-white);
+        color: var(--color-text);
+        transition: border-color var(--transition);
+      }
+      .consultation-form input:focus,
+      .consultation-form textarea:focus,
+      .consultation-form select:focus {
+        outline: none;
+        border-color: var(--color-accent);
+      }
+      .consultation-form textarea { min-height: 140px; resize: vertical; }
+      .consultation-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .consultation-form button[type="submit"] { align-self: flex-start; }
+      .consultation-subtitle {
+        text-align: center;
+        max-width: 640px;
+        margin: 0 auto 32px;
+        color: var(--color-text-secondary);
+        line-height: 1.6;
+      }
+      .consultation-success {
+        display: none;
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 32px;
+        background: #e8f5e9;
+        border-left: 4px solid #2e7d32;
+        border-radius: var(--radius-md);
+        color: #1b5e20;
+        font-size: 1.05rem;
+        line-height: 1.6;
+      }
+      .consultation-success.visible { display: block; }
+      @media (max-width: 600px) {
+        .consultation-form { padding: 24px; }
+        .consultation-form .row { grid-template-columns: 1fr; }
+      }
+      [data-theme="dark"] .consultation-form { background: #1a2638; }
+      [data-theme="dark"] .consultation-form input,
+      [data-theme="dark"] .consultation-form textarea,
+      [data-theme="dark"] .consultation-form select { background: #0d1b2a; color: #fff; border-color: #2a3a55; }
+    </style>
+  </head>
+  <body>
+    <header class="header"></header>
+
+    <div class="container">
+      <section class="consultation-page">
+        <div class="section-title">
+          <h1>კონსულტაციის მიღება</h1>
+        </div>
+        <p class="consultation-subtitle">
+          შეავსე ფორმა და ჩვენი წარმომადგენელი მალე დაგიკავშირდებათ.
+        </p>
+
+        <form class="consultation-form" id="consultationForm" novalidate>
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" />
+          <div class="row">
+            <label>
+              სახელი *
+              <input type="text" name="firstName" required autocomplete="given-name" />
+            </label>
+            <label>
+              გვარი *
+              <input type="text" name="lastName" required autocomplete="family-name" />
+            </label>
+          </div>
+
+          <label>
+            ელ-ფოსტა *
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+
+          <div class="row">
+            <label>
+              სასურველი საკონტაქტო არხი
+              <select name="channel">
+                <option value="WhatsApp">WhatsApp</option>
+                <option value="Telegram">Telegram</option>
+                <option value="Signal">Signal</option>
+                <option value="Email">Email</option>
+              </select>
+            </label>
+            <label>
+              ნომერი / Username *
+              <input type="text" name="contact" required placeholder="+995 555 12 34 56 ან @username" />
+            </label>
+          </div>
+
+          <label>
+            შენი მოთხოვნა *
+            <textarea name="message" required placeholder="მოკლედ აღწერეთ თქვენი იურიდიული საკითხი"></textarea>
+          </label>
+
+          <button type="submit" class="button button-primary" id="submitBtn">გაგზავნა</button>
+          <p id="formError" style="display:none; color:#c62828; font-size:0.9rem; margin:0;"></p>
+        </form>
+
+        <div class="consultation-success" id="consultationSuccess" role="status">
+          მადლობა! ჩვენი წარმომადგენელი მალე დაგიკავშირდებათ.
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer"></footer>
+    <footer class="footer-mobile"></footer>
+
+    <button class="back-to-top" aria-label="Back to top"></button>
+
+    <script>
+      // Web3Forms access key — public, არ არის საიდუმლო. დააგენერირე უფასოდ:
+      // https://web3forms.com  (Email-ით G.SHALAMBERIDZE@LBP.GE)
+      var WEB3FORMS_KEY = "66e25aa4-b711-4842-aa1e-e455f79d34a0";
+
+      (function () {
+        var form = document.getElementById("consultationForm");
+        var success = document.getElementById("consultationSuccess");
+        var submitBtn = document.getElementById("submitBtn");
+        var errBox = document.getElementById("formError");
+        if (!form) return;
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!form.checkValidity()) { form.reportValidity(); return; }
+          if (form._honey && form._honey.value) return; // honeypot
+          errBox.style.display = "none";
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = "იგზავნება...";
+
+          var payload = {
+            access_key: WEB3FORMS_KEY,
+            from_name: "LBP.GE Website",
+            subject: "ახალი კონსულტაციის მოთხოვნა — LBP.GE",
+            name: form.firstName.value + " " + form.lastName.value,
+            email: form.email.value,
+            channel: form.channel.value,
+            contact: form.contact.value,
+            message: form.message.value,
+          };
+
+          fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify(payload),
+          })
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              if (data.success) {
+                form.style.display = "none";
+                success.classList.add("visible");
+                success.scrollIntoView({ behavior: "smooth", block: "center" });
+              } else {
+                throw new Error(data.message || "Submit failed");
+              }
+            })
+            .catch(function (err) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = "გაგზავნა";
+              errBox.textContent = "გაგზავნა ვერ მოხერხდა. სცადე ხელახლა ან მოგვწერე G.SHALAMBERIDZE@LBP.GE-ზე.";
+              errBox.style.display = "block";
+              console.error("Web3Forms error:", err);
+            });
+        });
+      })();
+    </script>
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/footer.js"></script>
+    <script src="/scripts/lang.js"></script>
+    <script src="/scripts/index.js"></script>
+    <script src="/scripts/cookie-consent.js"></script>
+  </body>
+</html>
