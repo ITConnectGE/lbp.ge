@@ -367,65 +367,7 @@
     </style>
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <a href="../">
-          <img
-            src="/img/logo.png"
-            alt="LBP Logo"
-          />
-        </a>
-      </div>
-      <ul class="nav">
-        <li class="item-container">
-          <a href="../#home" class="item home">Home</a>
-        </li>
-        <li class="item-container">
-          <a href="../#about" class="item about">About</a>
-        </li>
-        <li class="item-container">
-          <a href="../#founder" class="item founder">Founder</a>
-        </li>
-        <li class="item-container" style="display: none;">
-          <a href="../#team" class="item team">Team</a>
-        </li>
-        <li class="item-container">
-          <a href="../#services" class="item services">Services</a>
-        </li>
-        <li class="item-container">
-          <a href="../vacancies/" class="item careers">Careers</a>
-        </li>
-        <li class="item-container">
-          <a href="../blog/" class="item blog">Blog</a>
-        </li>
-        <li class="item-container">
-          <a href="./" class="item contact">Contact</a>
-        </li>
-        <li>
-          <select
-            id="languageSelector"
-            class="dekstop-selector"
-            onchange="changeLanguage(this.value)"
-          >
-            <option value="en">En</option>
-            <option value="ka">&#4325;&#4304;</option>
-          </select>
-        </li>
-        <li><button id="themeToggle" aria-label="Switch to dark mode"></button></li>
-      </ul>
-      <div class="burder-content">
-        <select id="languageSelectorMobile" onchange="changeLanguage(this.value)">
-          <option value="en">En</option>
-          <option value="ka">&#4325;&#4304;</option>
-        </select>
-        <button id="themeToggle" aria-label="Switch to dark mode"></button>
-        <div class="burger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </header>
+    <header class="header"></header>
 
     <div class="container">
       <section class="contact-page">
@@ -588,6 +530,7 @@
     }
     </script>
     <button class="back-to-top" aria-label="Back to top"></button>
+    <script src="/scripts/header.js"></script>
     <script src="/scripts/footer.js"></script>
     <script src="/scripts/lang.js"></script>
     <script src="/scripts/index.js"></script>

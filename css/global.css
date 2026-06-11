@@ -1618,6 +1618,228 @@ section {
 
 
 /* ================================================================
+   JURISDICTIONS SECTION
+   ================================================================ */
+.jurisdictions {
+  padding: 80px 0;
+}
+.jurisdictions-subtitle {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+.jurisdictions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.jurisdiction-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  border-top: 3px solid var(--color-accent);
+}
+.jurisdiction-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.jurisdiction-flag {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.jurisdiction-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+  color: var(--color-text);
+}
+.jurisdiction-card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+[data-theme="dark"] .jurisdiction-card {
+  background: #1a2638;
+}
+
+/* ================================================================
+   HEADER DROPDOWN MENUS
+   ================================================================ */
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+}
+
+.dropdown-caret {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translate(-1px, -1px);
+  transition: transform var(--transition);
+  opacity: 0.8;
+}
+
+.has-dropdown.open .dropdown-caret,
+.has-dropdown:hover .dropdown-caret {
+  transform: rotate(-135deg) translate(-1px, -1px);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: var(--color-primary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
+  z-index: 1100;
+}
+
+.has-dropdown:hover .dropdown-menu,
+.has-dropdown.open .dropdown-menu,
+.has-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 18px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: background var(--transition), color var(--transition);
+}
+
+.dropdown-menu a:hover {
+  background: rgba(176, 141, 87, 0.18);
+  color: var(--color-white);
+}
+
+.dropdown-menu a::after {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .has-dropdown { width: 100%; }
+  .dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 14px 32px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.3s ease;
+  }
+  .has-dropdown.open .dropdown-menu {
+    max-height: 400px;
+    padding: 4px 0;
+  }
+  .dropdown-menu a {
+    padding: 12px 48px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ================================================================
+   HEADER CTA — Book a Consultation
+   ================================================================ */
+.header-cta-container {
+  margin-left: 16px;
+}
+
+.header-cta {
+  display: inline-block;
+  background: var(--color-accent);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 2px 8px rgba(176, 141, 87, 0.3);
+}
+
+.header-cta:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(176, 141, 87, 0.45);
+  color: var(--color-primary);
+}
+
+.header-cta::after {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .header-cta-container {
+    margin: 24px 32px 0;
+    padding: 0;
+  }
+  .header-cta {
+    display: block;
+    text-align: center;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ================================================================
    FLOATING CONTACT ICONS (WhatsApp / Telegram)
    ================================================================ */
 .floating-contacts {
@@ -1657,63 +1879,13 @@ section {
   background: #229ed9;
 }
 
-.floating-contact:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
+.floating-contact--signal {
+  background: #3a76f0;
 }
 
-@media (max-width: 850px) {
-  .floating-contacts {
-    bottom: 20px;
-    left: 20px;
-    gap: 10px;
-  }
-  .floating-contact {
-    width: 44px;
-    height: 44px;
-  }
-  .floating-contact img {
-    width: 24px;
-    height: 24px;
-  }
+.floating-contact--email {
+  background: #0d3b66;
 }
-
-/* ================================================================
-   FLOATING CONTACT ICONS (WhatsApp / Telegram / Signal / Email)
-   ================================================================ */
-.floating-contacts {
-  position: fixed;
-  bottom: 32px;
-  left: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 800;
-}
-
-.floating-contact {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition), box-shadow var(--transition);
-  background: #fff;
-}
-
-.floating-contact img {
-  width: 30px;
-  height: 30px;
-  display: block;
-  filter: brightness(0) invert(1);
-}
-
-.floating-contact--whatsapp { background: #25d366; }
-.floating-contact--telegram { background: #229ed9; }
-.floating-contact--signal   { background: #3a76f0; }
-.floating-contact--email    { background: #0d3b66; }
 
 .floating-contact:hover {
   transform: translateY(-3px);

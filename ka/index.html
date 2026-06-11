@@ -37,69 +37,7 @@
       </video>
       <img src="/img/advisory_logo.png" alt="LBP Advisory" />
     </div>
-    <header class="header">
-      <div class="logo">
-        <a href="#home">
-          <img
-            src="/img/logo.png"
-            alt="LBP Logo"
-          />
-        </a>
-      </div>
-
-      <ul class="nav">
-        <li class="item-container">
-          <a href="#home" class="item home">Home</a>
-        </li>
-        <li class="item-container">
-          <a href="#about" class="item about">About</a>
-        </li>
-        <li class="item-container">
-          <a href="#founder" class="item founder">Founder</a>
-        </li>
-        <li class="item-container" style="display: none;">
-          <a href="#team" class="item team">Team</a>
-        </li>
-        <li class="item-container">
-          <a href="#services" class="item services"
-            >სფეროები</a
-          >
-        </li>
-        <li class="item-container">
-          <a href="./vacancies/" class="item careers">Careers</a>
-        </li>
-        <li class="item-container">
-          <a href="./blog/" class="item blog">Blog</a>
-        </li>
-        <li class="item-container">
-          <a href="./contact/" class="item contact">Contact</a>
-        </li>
-        <li>
-          <select
-            id="languageSelector"
-            class="dekstop-selector"
-            onchange="changeLanguage(this.value)"
-          >
-            <option value="en">En</option>
-            <option value="ka">ქა</option>
-          </select>
-        </li>
-        <li><button id="themeToggle" aria-label="Switch to dark mode"></button></li>
-      </ul>
-
-      <div class="burder-content">
-        <select id="languageSelectorMobile" onchange="changeLanguage(this.value)">
-          <option value="en">En</option>
-          <option value="ka">ქა</option>
-        </select>
-        <button id="themeToggle" aria-label="Switch to dark mode"></button>
-        <div class="burger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </header>
+    <header class="header"></header>
 
     <!-- Hero -->
     <section id="home" class="start">
@@ -112,7 +50,7 @@
             <div class="buttons">
               <a href="consultation/">
                 <button id="contactBtn" type="" class="button button-primary">
-                  კონსულტაციის მიღება
+                  კონსულტაციის დაჯავშნა
                 </button>
               </a>
               <a href="#about">
@@ -370,6 +308,37 @@
 
 
 
+      <section id="jurisdictions" class="jurisdictions reveal">
+        <div class="section-title">
+          <h1 id="titleJurisdictions">იურისდიქციები</h1>
+        </div>
+        <p class="jurisdictions-subtitle" id="jurisdictionsSubtitle">
+          LBP-ი ემსახურება კლიენტებს მრავალ იურისდიქციაში ჩვენი ოფისების ქსელის მეშვეობით.
+        </p>
+        <ul class="jurisdictions-grid">
+          <li class="jurisdiction-card reveal-child">
+            <div class="jurisdiction-flag">🇦🇲</div>
+            <h3>LBP Armenia</h3>
+            <p>ერევანი</p>
+          </li>
+          <li class="jurisdiction-card reveal-child">
+            <div class="jurisdiction-flag">🇷🇸</div>
+            <h3>LBP Serbia</h3>
+            <p>ბელგრადი</p>
+          </li>
+          <li class="jurisdiction-card reveal-child">
+            <div class="jurisdiction-flag">🇦🇪</div>
+            <h3>LBP UAE</h3>
+            <p>დუბაი</p>
+          </li>
+          <li class="jurisdiction-card reveal-child">
+            <div class="jurisdiction-flag">🇺🇸</div>
+            <h3>LBP USA</h3>
+            <p>ვაშინგტონი &amp; ნიუ-იორკი</p>
+          </li>
+        </ul>
+      </section>
+
       <section id="careers" class="careers reveal">
         <div class="section-title">
           <h1 id="titleCareers">Careers</h1>
@@ -442,14 +411,6 @@
       <a href="https://t.me/FCCC27" target="_blank" rel="noopener noreferrer" class="floating-contact floating-contact--telegram" aria-label="დაგვიკავშირდით Telegram-ით">
         <img src="/img/telegram.svg" alt="Telegram" />
       </a>
-    </div>
-    <div class="floating-contacts" aria-label="დაგვიკავშირდით">
-      <a href="https://wa.me/995595223333" target="_blank" rel="noopener noreferrer" class="floating-contact floating-contact--whatsapp" aria-label="დაგვიკავშირდით WhatsApp-ით">
-        <img src="/img/whatsapp.svg" alt="WhatsApp" />
-      </a>
-      <a href="https://t.me/FCCC27" target="_blank" rel="noopener noreferrer" class="floating-contact floating-contact--telegram" aria-label="დაგვიკავშირდით Telegram-ით">
-        <img src="/img/telegram.svg" alt="Telegram" />
-      </a>
       <a href="https://signal.me/#eu/zwuOy-N542CYd__tspnFbQ5DYWFmws9q8OCo1M8-rltqxDAZSm5L0KII3Jcgpg5U" target="_blank" rel="noopener noreferrer" class="floating-contact floating-contact--signal" aria-label="დაგვიკავშირდით Signal-ით">
         <img src="/img/signal.svg" alt="Signal" />
       </a>
@@ -458,6 +419,7 @@
       </a>
     </div>
     <button class="back-to-top" aria-label="Back to top"></button>
+    <script src="/scripts/header.js"></script>
     <script src="/scripts/footer.js"></script>
     <script src="/scripts/lang.js"></script>
     <script src="/scripts/index.js"></script>

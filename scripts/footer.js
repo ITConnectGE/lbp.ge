@@ -28,7 +28,7 @@
           '</ul>' +
         '</div>' +
         '<div class="footer-col">' +
-          '<h4 class="footer-heading" id="footerBlogHeading">Blog</h4>' +
+          '<h4 class="footer-heading" id="footerBlogHeading">Publications</h4>' +
           '<ul class="footer-links">' +
             '<li><a href="' + base + 'blog/" id="footerBlog1">Virtual Assets in Georgia</a></li>' +
             '<li><a href="' + base + 'blog/LabourRegulation/" id="footerBlog2">Labour Regulation</a></li>' +

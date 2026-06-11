@@ -1,7 +1,7 @@
 {
 	"welcome": "More than just a law firm",
 	"welcomeP": "LBP ensures maximum growth and development of your business",
-	"contactBtn": "GET A CONSULTATION",
+	"contactBtn": "BOOK A CONSULTATION",
 	"aboutBtn": "ABOUT US",
 	"titleTeam": "Our Team",
 	"personG": "Giorgi Shalamberidze",
@@ -17,7 +17,7 @@
 	"textAbout3": "We believe that the well-being of our clients determines our success. It is this principle that makes us a trusted partner for businesses in Georgia and internationally.",
 	
 	"home": "Home",
-	"blog": "Blog",
+	"blog": "Publications",
 	"careers": "Careers",
 	"locationSubject": "Axis Towers Business Center",
 	"locationAdress": "37M Ilia Chavchavadze Avenue, Tbilisi 0179, 5th floor.",
@@ -136,7 +136,7 @@
 	"footerLinkServices": "Practices",
 	"footerLinkCareers": "Careers",
 	"footerLinkLocation": "Contact",
-	"footerBlogHeading": "Blog",
+	"footerBlogHeading": "Publications",
 	"footerContactHeading": "Contact",
 	"footerAddress": "37m Ilia Chavchavadze Ave, Tbilisi 0179",
 

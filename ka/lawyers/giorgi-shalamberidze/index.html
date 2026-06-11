@@ -30,48 +30,7 @@
     />
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <a href="../../">
-          <img
-            src="https://lbp.ge/wp-content/uploads/2023/09/LBP_white.png"
-            alt="LBP Logo"
-          />
-        </a>
-      </div>
-      <ul class="nav">
-        <li>
-          <select
-            id="languageSelector"
-            class="dekstop-selector"
-            onchange="changeLanguage(this.value)"
-          >
-            <option value="en">En</option>
-            <option value="ka">ქა</option>
-          </select>
-        </li>
-        <li><button id="themeToggle" aria-label="Switch to dark mode"></button></li>
-        <a href="../../#home" class="item home">Home</a>
-        <a href="../../#team" class="item team">Team</a>
-        <a href="../../#about" class="item about">About</a>
-        <a href="../../#services" class="item services"
-          >სფეროები</a
-        >
-        <a href="../../contact/" class="item contact">Contact</a>
-      </ul>
-      <div class="burder-content">
-        <select id="languageSelectorMobile" onchange="changeLanguage(this.value)">
-          <option value="en">En</option>
-          <option value="ka">ქა</option>
-        </select>
-        <button id="themeToggle" aria-label="Switch to dark mode"></button>
-        <div class="burger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </header>
+    <header class="header"></header>
     <div class="container">
       <div class="person">
         <div class="photo">
@@ -131,6 +90,7 @@
       "url": "https://lbp.ge/ka/lawyers/giorgi-shalamberidze/"
     }
     </script>
+    <script src="/scripts/header.js"></script>
     <script src="/scripts/footer.js"></script>
     <script src="/scripts/lang.js"></script>
     <script src="/scripts/index.js"></script>
