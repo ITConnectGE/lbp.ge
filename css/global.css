@@ -282,7 +282,7 @@ select option {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1330px) {
   .nav {
     position: fixed;
     top: 0;
@@ -1758,7 +1758,7 @@ section {
   display: none;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1330px) {
   .has-dropdown { width: 100%; }
   .dropdown-toggle {
     width: 100%;
@@ -1808,7 +1808,7 @@ section {
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  padding: 12px 24px;
+  padding: 10px 10px;
   border-radius: var(--radius-sm);
   white-space: nowrap;
   transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
@@ -1826,7 +1826,7 @@ section {
   display: none;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1330px) {
   .header-cta-container {
     margin: 24px 32px 0;
     padding: 0;
@@ -2455,7 +2455,7 @@ section {
   background: rgba(255, 255, 255, 0.15);
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1330px) {
   .nav li #themeToggle {
     display: none;
   }
