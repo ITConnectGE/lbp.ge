@@ -164,8 +164,21 @@ a::after {
   }
 }
 
+.logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  display: inline-flex;
+  align-items: center;
+}
+
 .logo img {
   height: 36px;
+  width: auto;
+  display: block;
   transition: height var(--transition);
 }
 
@@ -192,6 +205,7 @@ a::after {
   letter-spacing: 0.08em;
   padding: 6px 10px;
   position: relative;
+  white-space: nowrap;
   transition: color var(--transition);
 }
 
@@ -282,7 +296,7 @@ select option {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1064px) {
   .nav {
     position: fixed;
     top: 0;
@@ -1688,6 +1702,7 @@ section {
   align-items: center;
   gap: 6px;
   padding: 6px 10px;
+  white-space: nowrap;
 }
 
 .dropdown-caret {
@@ -1749,16 +1764,17 @@ section {
   transition: background var(--transition), color var(--transition);
 }
 
-.dropdown-menu a:hover {
-  background: rgba(176, 141, 87, 0.18);
-  color: var(--color-white);
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  background: rgba(176, 141, 87, 0.25);
+  color: #ffffff;
 }
 
 .dropdown-menu a::after {
   display: none;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1064px) {
   .has-dropdown { width: 100%; }
   .dropdown-toggle {
     width: 100%;
@@ -1826,7 +1842,7 @@ section {
   display: none;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1064px) {
   .header-cta-container {
     margin: 24px 32px 0;
     padding: 0;
@@ -2455,7 +2471,7 @@ section {
   background: rgba(255, 255, 255, 0.15);
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1064px) {
   .nav li #themeToggle {
     display: none;
   }

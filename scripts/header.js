@@ -70,6 +70,7 @@
   var aboutGroup = dropdown(t.aboutGroup, [
     { href: base + '#about', label: t.about },
     { href: base + '#founder', label: t.founder },
+    { href: base + '#services', label: t.services },
     // { href: base + 'key-people/', label: t.keyPeople },  // TEMP HIDDEN: restore when Key People content is ready
   ]);
 
@@ -95,7 +96,6 @@
     '<ul class="nav">' +
       navItem(base + '#home', 'home', t.home) +
       aboutGroup +
-      navItem(base + '#services', 'services', t.services) +
       // clientsGroup +  // TEMP HIDDEN — restore when Clients/Results content is ready
       navItem(base + '#jurisdictions', '', t.jurisdictions) +  // TEMP standalone — remove when clientsGroup is restored
       insightsGroup +
