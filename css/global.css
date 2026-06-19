@@ -356,6 +356,35 @@ select option {
 }
 
 
+/* Mid-desktop tightening — between burger (<900) and full desktop (>1350) */
+@media (min-width: 901px) and (max-width: 1350px) {
+  .nav {
+    gap: 4px;
+  }
+  .nav .item {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    padding: 4px 7px;
+  }
+  .dropdown-toggle {
+    padding: 4px 7px;
+    gap: 4px;
+  }
+  .header-cta {
+    font-size: 0.78rem;
+    padding: 10px 16px;
+    letter-spacing: 0.02em;
+  }
+  .header {
+    padding: 0 24px;
+  }
+  /* Hide non-essential items at mid widths — Jurisdictions stays reachable via homepage scroll, Careers via footer */
+  .nav .item.careers,
+  .nav li #themeToggle {
+    display: none;
+  }
+}
+
 /* ================================================================
    HERO / START SECTION
    ================================================================ */
@@ -1410,7 +1439,7 @@ section {
   display: none;
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 900px) {
   .blog {
     flex-direction: column;
   }
@@ -1667,12 +1696,12 @@ section {
   box-shadow: var(--shadow-md);
 }
 .jurisdiction-flag {
-  width: 64px;
-  height: 48px;
+  width: 44px;
+  height: 33px;
   margin: 0 auto 16px;
-  border-radius: 6px;
+  border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(13, 27, 42, 0.18);
+  box-shadow: 0 1px 4px rgba(13, 27, 42, 0.15);
   background: var(--color-bg-alt);
 }
 
