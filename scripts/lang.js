@@ -289,6 +289,12 @@ function applyText(languageData) {
   if (footerBlog1) footerBlog1.textContent = languageData.footerBlog1;
   const footerBlog2 = document.querySelector("#footerBlog2");
   if (footerBlog2) footerBlog2.textContent = languageData.footerBlog2;
+  const footerBlog3 = document.querySelector("#footerBlog3");
+  if (footerBlog3) footerBlog3.textContent = languageData.footerBlog3;
+  const footerBlog4 = document.querySelector("#footerBlog4");
+  if (footerBlog4) footerBlog4.textContent = languageData.footerBlog4;
+  const footerBlog5 = document.querySelector("#footerBlog5");
+  if (footerBlog5) footerBlog5.textContent = languageData.footerBlog5;
 
   // Contact page
   const contactPageTitle = document.querySelector("#contactPageTitle");
