@@ -20,6 +20,7 @@
         insightsGroup: "რესურსები",
         publications: "პუბლიკაციები",
         media: "მედია",
+        gallery: "გალერია",
         faq: "FAQ",
         careers: "კარიერა",
         contact: "კონტაქტი",
@@ -39,6 +40,7 @@
         insightsGroup: "Insights",
         publications: "Publications",
         media: "Media",
+        gallery: "Gallery",
         faq: "FAQ",
         careers: "Careers",
         contact: "Contact",
@@ -83,7 +85,8 @@
 
   var insightsGroup = dropdown(t.insightsGroup, [
     { href: base + 'publications/', label: t.publications },
-    // { href: base + 'media/', label: t.media },  // TEMP HIDDEN: restore when Media content is ready
+    { href: base + 'media/', label: t.media },
+    { href: base + 'gallery/', label: t.gallery },
     { href: base + 'faq/', label: t.faq },
   ]);
 

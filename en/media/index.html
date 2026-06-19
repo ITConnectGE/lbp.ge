@@ -9,16 +9,165 @@
     <link rel="stylesheet" href="/css/global.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>Media — LBP</title>
+    <style>
+      .media-page { padding: 80px 0; }
+      .media-page .section-title { margin-bottom: 16px; }
+      .media-subtitle { text-align: center; max-width: 720px; margin: 0 auto 40px; color: var(--color-text-secondary); line-height: 1.7; }
+      .media-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .media-card {
+        display: flex;
+        flex-direction: column;
+        background: var(--color-white);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        transition: transform var(--transition), box-shadow var(--transition);
+        color: inherit;
+      }
+      .media-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+      .media-card::after { display: none; }
+      .media-thumb {
+        position: relative;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: var(--color-bg-alt);
+      }
+      .media-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+      .media-card:hover .media-thumb img { transform: scale(1.05); }
+      .media-thumb .play-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(13, 27, 42, 0.18);
+        transition: background var(--transition);
+      }
+      .media-card:hover .play-overlay { background: rgba(13, 27, 42, 0.35); }
+      .play-overlay::after {
+        content: "";
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.95);
+        clip-path: polygon(30% 20%, 30% 80%, 78% 50%);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+      }
+      .media-meta {
+        padding: 20px 22px 22px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        flex: 1;
+      }
+      .media-outlet {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--color-accent);
+        font-weight: 700;
+      }
+      .media-title {
+        font-family: var(--font-heading);
+        font-size: 1.1rem;
+        line-height: 1.4;
+        color: var(--color-primary);
+        margin: 0;
+      }
+      .media-lang { font-size: 0.75rem; color: var(--color-text-secondary); font-style: italic; }
+      .media-date { font-size: 0.8rem; color: var(--color-text-secondary); margin-top: auto; padding-top: 8px; }
+      [data-theme="dark"] .media-card { background: #1a2638; }
+      [data-theme="dark"] .media-title { color: #eae8e4; }
+    </style>
   </head>
   <body>
     <header class="header"></header>
     <div class="container">
-      <section class="placeholder-page" style="padding: 80px 0; min-height: 60vh;">
+      <section class="media-page">
         <div class="section-title"><h1>Media</h1></div>
-        <p style="text-align:center; max-width: 720px; margin: 24px auto; color: var(--color-text-secondary); line-height: 1.7;">
-          Press coverage, interviews, podcast appearances, and expert commentary from the LBP team.
-        </p>
-        <p style="text-align:center; color: var(--color-text-secondary); font-style: italic;">Media items coming soon.</p>
+        <p class="media-subtitle">Press coverage, interviews, podcast appearances, and expert commentary from the LBP team.</p>
+
+        <ul class="media-grid">
+          <li>
+            <a href="https://bm.ge/news/yovlismomtsveli-strategiuli-partnioroba-ra-surs-chinets-da-ras-miighebs-saqartvelo" target="_blank" rel="noopener noreferrer" class="media-card">
+              <div class="media-thumb"><img src="/img/media/bm-china.jpg" alt="Comprehensive Strategic Partnership" loading="lazy" /></div>
+              <div class="media-meta">
+                <span class="media-outlet">bm.ge</span>
+                <h3 class="media-title">"Comprehensive Strategic Partnership" — What China Wants and What Georgia Will Gain</h3>
+                <span class="media-lang">Article in Georgian</span>
+                <span class="media-date">June 11, 2026</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://bm.ge/news/sarestorno-biznesi-bavshviakhan-erti-momvleli-chamova-khan-meore-da-vizrdebit-restoratori" target="_blank" rel="noopener noreferrer" class="media-card">
+              <div class="media-thumb"><img src="/img/media/bm-restaurant.jpg" alt="The restaurant business is a child" loading="lazy" /></div>
+              <div class="media-meta">
+                <span class="media-outlet">bm.ge</span>
+                <h3 class="media-title">"The Restaurant Business is a Child... Sometimes One Caretaker Comes, Sometimes Another, and We Grow" — Restaurateur</h3>
+                <span class="media-lang">Article in Georgian</span>
+                <span class="media-date">June 19, 2026</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.entrepreneur.com/ka/zrdis-strategiebi/lbp-law-office-ambitsiuri/379272" target="_blank" rel="noopener noreferrer" class="media-card">
+              <div class="media-thumb"><img src="/img/media/entrepreneur-lbp.jpg" alt="LBP Law Office — Ambitious Perspectives" loading="lazy" /></div>
+              <div class="media-meta">
+                <span class="media-outlet">Entrepreneur Georgia</span>
+                <h3 class="media-title">LBP Law Office — Ambitious Perspectives in the Legal Services Market</h3>
+                <span class="media-lang">Article in Georgian</span>
+                <span class="media-date">August 3, 2021</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/watch?v=Nm5i97s_XE0" target="_blank" rel="noopener noreferrer" class="media-card">
+              <div class="media-thumb">
+                <img src="/img/media/youtube-rezume.jpg" alt="Rezume — TV interview" loading="lazy" />
+                <div class="play-overlay"></div>
+              </div>
+              <div class="media-meta">
+                <span class="media-outlet">YouTube</span>
+                <h3 class="media-title">Rezume — TV Interview with Giorgi Shalamberidze, Giorgi Tumasiani &amp; Levan Samushia</h3>
+                <span class="media-lang">In Georgian</span>
+                <span class="media-date">November 26, 2025</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.facebook.com/reel/2201356237376142/" target="_blank" rel="noopener noreferrer" class="media-card">
+              <div class="media-thumb">
+                <img src="/img/media/facebook-reel.jpg" alt="LBP Facebook reel" loading="lazy" />
+                <div class="play-overlay"></div>
+              </div>
+              <div class="media-meta">
+                <span class="media-outlet">Facebook</span>
+                <h3 class="media-title">LBP Reel on Facebook</h3>
+              </div>
+            </a>
+          </li>
+        </ul>
       </section>
     </div>
     <footer class="footer"></footer>
