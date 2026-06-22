@@ -1850,6 +1850,18 @@ section {
 }
 
 /* ================================================================
+   HEADER LAYOUT — CTA on the left (after logo), lang/theme on the right
+   ================================================================ */
+@media (min-width: 901px) {
+  .nav-right-start {
+    margin-left: auto;
+  }
+  .header-cta-container {
+    margin-right: 12px;
+  }
+}
+
+/* ================================================================
    HEADER CTA — Book a Consultation
    ================================================================ */
 .header-cta-container {

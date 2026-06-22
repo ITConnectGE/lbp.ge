@@ -97,6 +97,7 @@
       '</a>' +
     '</div>' +
     '<ul class="nav">' +
+      '<li class="header-cta-container"><a href="' + base + 'consultation/" class="header-cta">' + t.consultation + '</a></li>' +
       navItem(base + '#home', 'home', t.home) +
       aboutGroup +
       // clientsGroup +  // TEMP HIDDEN — restore when Clients/Results content is ready
@@ -104,14 +105,13 @@
       insightsGroup +
       navItem(base + 'vacancies/', 'careers', t.careers) +
       navItem(base + 'contact/', 'contact', t.contact) +
-      '<li>' +
+      '<li class="nav-right-start">' +
         '<select id="languageSelector" class="dekstop-selector" onchange="changeLanguage(this.value)">' +
           '<option value="en">En</option>' +
           '<option value="ka">ქა</option>' +
         '</select>' +
       '</li>' +
       '<li><button id="themeToggle" aria-label="Switch to dark mode"></button></li>' +
-      '<li class="header-cta-container"><a href="' + base + 'consultation/" class="header-cta">' + t.consultation + '</a></li>' +
     '</ul>' +
     '<div class="burder-content">' +
       '<select id="languageSelectorMobile" onchange="changeLanguage(this.value)">' +
