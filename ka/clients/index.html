@@ -3,22 +3,424 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="LBP-ის კლიენტები სხვადასხვა ინდუსტრიიდან." />
+    <meta name="description" content="LBP-ის კლიენტები — ურთიერთთანამშრომლობის მემორანდუმი, მომსახურება გაუწია და პარტნიორი კომპანიები." />
     <link rel="canonical" href="https://lbp.ge/ka/clients/" />
+    <link rel="alternate" hreflang="en" href="https://lbp.ge/en/clients/" />
+    <link rel="alternate" hreflang="ka" href="https://lbp.ge/ka/clients/" />
     <link rel="shortcut icon" href="/img/iconi.png" />
     <link rel="stylesheet" href="/css/global.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@400;500;600;700&family=Noto+Serif+Georgian:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>კლიენტები — LBP</title>
+    <style>
+      .clients-page { padding: 72px 0 100px; }
+      .clients-intro {
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto 32px;
+        color: var(--color-text-secondary);
+        line-height: 1.75;
+        font-size: 1.02rem;
+        padding: 0 24px;
+      }
+      .clients-group { margin-top: 56px; }
+      .clients-group-title {
+        font-family: var(--font-heading);
+        font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+        color: var(--color-primary);
+        text-align: center;
+        margin: 0 auto 8px;
+        max-width: 760px;
+        padding: 0 24px;
+      }
+      .clients-group-title::after {
+        content: "";
+        display: block;
+        width: 56px;
+        height: 2px;
+        background: var(--color-accent);
+        margin: 14px auto 0;
+      }
+      .clients-group-count {
+        text-align: center;
+        color: var(--color-text-secondary);
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin: 0 0 28px;
+      }
+
+      .slider {
+        position: relative;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 84px;
+      }
+      .slider::before,
+      .slider::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        bottom: 24px;
+        width: 84px;
+        z-index: 4;
+        pointer-events: none;
+        background: linear-gradient(to right, var(--color-bg), transparent);
+      }
+      .slider::before { left: 0; }
+      .slider::after { right: 0; transform: scaleX(-1); }
+      .slider-track {
+        display: flex;
+        gap: 22px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        padding: 12px 0 32px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .slider-track::-webkit-scrollbar { display: none; }
+
+      .client-card {
+        flex: 0 0 calc((100% - 44px) / 3);
+        scroll-snap-align: start;
+        background: var(--color-white);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(13, 27, 42, 0.06), 0 1px 3px rgba(13, 27, 42, 0.08);
+        color: var(--color-primary);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s;
+      }
+      .client-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 48px -12px rgba(13, 27, 42, 0.18), 0 8px 16px -4px rgba(13, 27, 42, 0.1);
+      }
+      .client-card::after { display: none; }
+      .client-card-thumb {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        background: var(--color-bg-alt);
+      }
+      .client-card-thumb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 60%, rgba(13, 27, 42, 0.35) 100%);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
+      .client-card:hover .client-card-thumb::after { opacity: 1; }
+      .client-card-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .client-card:hover .client-card-thumb img { transform: scale(1.06); }
+      .client-card-name {
+        padding: 18px 18px 22px;
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.35;
+        text-align: center;
+        color: var(--color-primary);
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .client-card-name::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 32px;
+        height: 2px;
+        background: var(--color-accent);
+        transition: width 0.4s;
+      }
+      .client-card:hover .client-card-name::before { width: 72px; }
+
+      .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(14px) saturate(180%);
+        -webkit-backdrop-filter: blur(14px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        color: var(--color-primary);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        box-shadow: 0 12px 32px rgba(13, 27, 42, 0.18), 0 0 0 1px rgba(13, 27, 42, 0.04);
+        transition: background 0.3s, border-color 0.3s, transform 0.3s, color 0.3s, box-shadow 0.3s, opacity 0.3s;
+      }
+      .slider-btn--prev { left: 12px; }
+      .slider-btn--next { right: 12px; }
+      .slider-btn:hover {
+        background: var(--color-accent);
+        border-color: var(--color-accent);
+        color: var(--color-primary);
+        transform: translateY(-50%) scale(1.08);
+        box-shadow: 0 18px 40px rgba(176, 141, 87, 0.4);
+      }
+      .slider-btn:disabled {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .slider-btn::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-right: 2.5px solid currentColor;
+        border-top: 2.5px solid currentColor;
+        transform: rotate(45deg) translate(-3px, 3px);
+      }
+      .slider-btn--prev::before { transform: rotate(-135deg) translate(-3px, 3px); }
+
+      [data-theme="dark"] .client-card { background: #1a2638; color: #eae8e4; }
+      [data-theme="dark"] .client-card-name { color: #eae8e4; }
+      [data-theme="dark"] .slider-btn {
+        background: rgba(26, 38, 56, 0.7);
+        border-color: rgba(255, 255, 255, 0.12);
+        color: #eae8e4;
+      }
+      [data-theme="dark"] .slider::before { background: linear-gradient(to right, #0d1b2a, transparent); }
+
+      @media (max-width: 900px) {
+        .slider { padding: 0 56px; }
+        .slider::before, .slider::after { width: 56px; }
+        .slider-btn { width: 48px; height: 48px; }
+        .slider-btn--prev { left: 6px; }
+        .slider-btn--next { right: 6px; }
+        .client-card { flex: 0 0 calc((100% - 22px) / 2); }
+      }
+      @media (max-width: 600px) {
+        .clients-page { padding: 48px 0 72px; }
+        .slider { padding: 0 44px; }
+        .slider::before, .slider::after { width: 44px; }
+        .slider-track { gap: 14px; }
+        .client-card { flex: 0 0 78vw; }
+        .slider-btn { width: 40px; height: 40px; }
+        .slider-btn--prev { left: 0; }
+        .slider-btn--next { right: 0; }
+      }
+    </style>
   </head>
   <body>
     <header class="header"></header>
     <div class="container">
-      <section class="placeholder-page" style="padding: 80px 0; min-height: 60vh;">
+      <section class="clients-page">
         <div class="section-title"><h1>კლიენტები</h1></div>
-        <p style="text-align:center; max-width: 720px; margin: 24px auto; color: var(--color-text-secondary); line-height: 1.7;">
-          ჩვენი კლიენტები მოიცავს საერთაშორისო ინვესტორებს, წამყვან მწარმოებლებს, სპორტულ ფედერაციებს, გამომცემლობებს და კერძო კლიენტებს რამდენიმე იურისდიქციიდან.
+        <p class="clients-intro">
+          LBP-ის კლიენტებად გვყავს როგორც საერთაშორისო ინვესტორები, წამყვანი მწარმოებლები და სპორტული ფედერაციები, ისე გამომცემლობები, ტექნოლოგიური კომპანიები და კერძო კლიენტები რამდენიმე იურისდიქციიდან.
         </p>
-        <p style="text-align:center; color: var(--color-text-secondary); font-style: italic;">კლიენტების ლოგოები და დეტალები მალე გამოჩნდება.</p>
+
+        <div class="clients-group">
+          <h2 class="clients-group-title">ურთიერთთანამშრომლობის მემორანდუმი</h2>
+          <p class="clients-group-count">5 ორგანიზაცია</p>
+          <div class="slider">
+            <div class="slider-track">
+              <a href="https://www.facebook.com/share/p/18qfzzqoW7/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/01-hope.jpg" alt="HOPE / იმედი" loading="lazy" /></div>
+                <div class="client-card-name">HOPE / იმედი</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/18qfzzqoW7/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/02-europa-donna.jpg" alt="EUROPA DONNA Georgia" loading="lazy" /></div>
+                <div class="client-card-name">EUROPA DONNA Georgia</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1BQqa6Smds/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/03-gpba.jpg" alt="GPBA" loading="lazy" /></div>
+                <div class="client-card-name">GPBA — წიგნის გამომცემელთა და გამავრცელებელთა ასოციაცია</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/14hQSMYAZ2W/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/04-entrepreneurs.jpg" alt="მეწარმეთა ასოციაცია" loading="lazy" /></div>
+                <div class="client-card-name">მეწარმეთა ასოციაცია / Entrepreneurs Association</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/17m8sLX62R/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/05-ng-georgia.jpg" alt="NG Georgia" loading="lazy" /></div>
+                <div class="client-card-name">NG Georgia</div>
+              </a>
+            </div>
+            <button class="slider-btn slider-btn--prev" aria-label="წინა" data-direction="prev"></button>
+            <button class="slider-btn slider-btn--next" aria-label="შემდეგი" data-direction="next"></button>
+          </div>
+        </div>
+
+        <div class="clients-group">
+          <h2 class="clients-group-title">მომსახურება გაუწია</h2>
+          <p class="clients-group-count">30 კომპანია</p>
+          <div class="slider">
+            <div class="slider-track">
+              <a href="https://www.facebook.com/share/p/1E1Br8zfuE/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/33-sarajishvili.jpg" alt="სს სარაჯიშვილი" loading="lazy" /></div>
+                <div class="client-card-name">სს სარაჯიშვილი</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/18CREyRLxy/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/21-georgia-today.jpg" alt="Georgia Today" loading="lazy" /></div>
+                <div class="client-card-name">Georgia Today</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1EKqqKuqu8/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/35-henkel.jpg" alt="ჰენკელი" loading="lazy" /></div>
+                <div class="client-card-name">„ჰენკელი"</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/198fd9Cjxy/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/34-jb-builders.jpg" alt="ჯენერეიშენ ბილდერს ჯბ" loading="lazy" /></div>
+                <div class="client-card-name">შპს ჯენერეიშენ ბილდერს ჯბ</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1LepBJN2sZ/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/32-padel.jpg" alt="პადელის ფედერაცია" loading="lazy" /></div>
+                <div class="client-card-name">საქართველოს პადელის ეროვნული ფედერაცია</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1CeizX4zKc/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/31-gvc.jpg" alt="GVC" loading="lazy" /></div>
+                <div class="client-card-name">საერთაშორისო კომპანია GVC</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/18pNNy7ffJ/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/30-fencing.jpg" alt="ფარიკაობის ფედერაცია" loading="lazy" /></div>
+                <div class="client-card-name">საქართველოს ფარიკაობის ფედერაცია</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/14fTwByYh5E/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/29-rustavoili.jpg" alt="რუსთავოილი" loading="lazy" /></div>
+                <div class="client-card-name">სს რუსთავოილი</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1KATVWfhuy/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/28-mixd.jpg" alt="mixd" loading="lazy" /></div>
+                <div class="client-card-name">ლატვიელი ინვესტორი „mixd"</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1D2rUDrL61/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/27-diogene.jpg" alt="დიოგენე" loading="lazy" /></div>
+                <div class="client-card-name">გამომცემლობა „დიოგენე"</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1BBmfPG1ns/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/26-black-opal.jpg" alt="Casino Black Opal" loading="lazy" /></div>
+                <div class="client-card-name">Casino Black Opal</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/19CzCp4JDF/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/25-watchman.jpg" alt="დარაჯი / Watchman" loading="lazy" /></div>
+                <div class="client-card-name">დარაჯი • Watchman</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1CssakhDxD/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/24-twopointzero.jpg" alt="Two Point Zero" loading="lazy" /></div>
+                <div class="client-card-name">Two Point Zero</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1Cfhd8VMdv/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/23-nesvi.jpg" alt="NESVI" loading="lazy" /></div>
+                <div class="client-card-name">NESVI</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1ED6pEvXuG/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/22-roommate.jpg" alt="Roommate Georgia" loading="lazy" /></div>
+                <div class="client-card-name">Roommate Georgia</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1GxG7TU2ND/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/20-unity.jpg" alt="იუნითი" loading="lazy" /></div>
+                <div class="client-card-name">ტექნოლოგიური კომპანია „იუნითი"</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1JRumqbdNV/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/19-creative-kids.jpg" alt="ქრეატივ ქიდსი" loading="lazy" /></div>
+                <div class="client-card-name">კომპანია „ქრეატივ ქიდსი"</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1CjxxD3iZa/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/18-ratis-bar.jpg" alt="Rati's Bar" loading="lazy" /></div>
+                <div class="client-card-name">Rati's Bar</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1ESgcX8ri8/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/17-art-inception.jpg" alt="Art Inception Georgia" loading="lazy" /></div>
+                <div class="client-card-name">Art Inception Georgia</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1b9mewWG3T/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/16-horizon.jpg" alt="ჰორიზონტი" loading="lazy" /></div>
+                <div class="client-card-name">სასტუმრო ჰორიზონტი</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/14kudPbU3HE/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/15-alfa-pet.jpg" alt="ალფა პეტი" loading="lazy" /></div>
+                <div class="client-card-name">ალფა პეტი</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/19ELK5ybE5/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/14-pearl-club.jpg" alt="The Pearl Club" loading="lazy" /></div>
+                <div class="client-card-name">The Pearl Club</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/192xX4D47w/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/13-usecard.jpg" alt="Usecard" loading="lazy" /></div>
+                <div class="client-card-name">Usecard</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1BE2CH2rCW/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/12-covtest.jpg" alt="Covtest.ge" loading="lazy" /></div>
+                <div class="client-card-name">Covtest.ge</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/18ptxVSTRh/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/11-book-festival.jpg" alt="თბილისის წიგნის ფესტივალი" loading="lazy" /></div>
+                <div class="client-card-name">თბილისის წიგნის 23-ე საერთაშორისო ფესტივალი</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1FtUHAjvzj/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/10-kudos.jpg" alt="Kudos Georgia" loading="lazy" /></div>
+                <div class="client-card-name">Kudos Georgia</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1Hwy9yrNkK/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/09-jacket.jpg" alt="ჟაკეტი / Jacket" loading="lazy" /></div>
+                <div class="client-card-name">ჟაკეტი • Jacket</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1ERtXsuxh1/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/08-peakit.jpg" alt="PeakIT" loading="lazy" /></div>
+                <div class="client-card-name">PeakIT</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/17ip6pdB5C/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/07-mplus.jpg" alt="MPLUS" loading="lazy" /></div>
+                <div class="client-card-name">ემპლუს • MPLUS</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1FtGnV3Pkm/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/06-tsodna.jpg" alt="ცოდნა" loading="lazy" /></div>
+                <div class="client-card-name">საზოგადოება „ცოდნა"</div>
+              </a>
+            </div>
+            <button class="slider-btn slider-btn--prev" aria-label="წინა" data-direction="prev"></button>
+            <button class="slider-btn slider-btn--next" aria-label="შემდეგი" data-direction="next"></button>
+          </div>
+        </div>
+
+        <div class="clients-group">
+          <h2 class="clients-group-title">პარტნიორი</h2>
+          <p class="clients-group-count">5 ორგანიზაცია</p>
+          <div class="slider">
+            <div class="slider-track">
+              <a href="https://www.facebook.com/share/p/1De99B8Xku/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/36-elsa.jpg" alt="ELSA" loading="lazy" /></div>
+                <div class="client-card-name">ელსა (ELSA)</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1AjZYLtY4V/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/37-gochits.jpg" alt="Gochit's" loading="lazy" /></div>
+                <div class="client-card-name">Gochit's • გოჩიტ'ს</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1C5kmwtj52/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/38-zzip.jpg" alt="Zzip" loading="lazy" /></div>
+                <div class="client-card-name">Zzip • ზზიპ</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/19EyHNGMJu/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/39-edupay.jpg" alt="Edupay" loading="lazy" /></div>
+                <div class="client-card-name">Edupay • ედუფეი</div>
+              </a>
+              <a href="https://www.facebook.com/share/p/1S2PkxCi9g/" target="_blank" rel="noopener noreferrer" class="client-card">
+                <div class="client-card-thumb"><img src="/img/clients/40-anabechdi.jpg" alt="ანაბეჭდი" loading="lazy" /></div>
+                <div class="client-card-name">ანაბეჭდი • Anabechdi</div>
+              </a>
+            </div>
+            <button class="slider-btn slider-btn--prev" aria-label="წინა" data-direction="prev"></button>
+            <button class="slider-btn slider-btn--next" aria-label="შემდეგი" data-direction="next"></button>
+          </div>
+        </div>
       </section>
     </div>
     <footer class="footer"></footer>
@@ -29,5 +431,51 @@
     <script src="/scripts/lang.js"></script>
     <script src="/scripts/index.js"></script>
     <script src="/scripts/cookie-consent.js"></script>
+    <script>
+      document.querySelectorAll(".slider").forEach(function (slider) {
+        var track = slider.querySelector(".slider-track");
+        var prev = slider.querySelector('[data-direction="prev"]');
+        var next = slider.querySelector('[data-direction="next"]');
+        var cards = track.querySelectorAll(".client-card");
+
+        function step() {
+          if (!cards.length) return 320;
+          var gap = parseFloat(getComputedStyle(track).gap || 20);
+          return cards[0].offsetWidth + gap;
+        }
+        function updateActive() {
+          var center = track.scrollLeft + track.clientWidth / 2;
+          var bestIdx = 0, bestDist = Infinity;
+          for (var i = 0; i < cards.length; i++) {
+            var c = cards[i].offsetLeft + cards[i].offsetWidth / 2;
+            var d = Math.abs(c - center);
+            if (d < bestDist) { bestDist = d; bestIdx = i; }
+          }
+          cards.forEach(function (el, idx) {
+            el.classList.toggle("is-active", idx === bestIdx);
+          });
+        }
+        function updateButtons() {
+          var max = track.scrollWidth - track.clientWidth - 1;
+          prev.disabled = track.scrollLeft <= 1;
+          next.disabled = track.scrollLeft >= max;
+        }
+        function update() {
+          updateActive();
+          updateButtons();
+        }
+        prev.addEventListener("click", function () {
+          track.scrollBy({ left: -step(), behavior: "smooth" });
+        });
+        next.addEventListener("click", function () {
+          track.scrollBy({ left: step(), behavior: "smooth" });
+        });
+        track.addEventListener("scroll", function () {
+          window.requestAnimationFrame(update);
+        });
+        window.addEventListener("resize", update);
+        update();
+      });
+    </script>
   </body>
 </html>

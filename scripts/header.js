@@ -87,6 +87,7 @@
     { href: base + 'publications/', label: t.publications },
     { href: base + 'media/', label: t.media },
     { href: base + 'gallery/', label: t.gallery },
+    { href: base + 'clients/', label: t.clients },
     { href: base + 'faq/', label: t.faq },
   ]);
 
