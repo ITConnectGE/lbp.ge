@@ -295,6 +295,8 @@ function applyText(languageData) {
   if (footerBlog4) footerBlog4.textContent = languageData.footerBlog4;
   const footerBlog5 = document.querySelector("#footerBlog5");
   if (footerBlog5) footerBlog5.textContent = languageData.footerBlog5;
+  const footerBlog6 = document.querySelector("#footerBlog6");
+  if (footerBlog6) footerBlog6.textContent = languageData.footerBlog6;
 
   // Contact page
   const contactPageTitle = document.querySelector("#contactPageTitle");

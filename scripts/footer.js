@@ -30,6 +30,7 @@
         '<div class="footer-col">' +
           '<h4 class="footer-heading" id="footerBlogHeading">Publications</h4>' +
           '<ul class="footer-links">' +
+            '<li><a href="' + base + 'blog/CompanyForms/" id="footerBlog6">The Main Forms of a Company in Georgia</a></li>' +
             '<li><a href="' + base + 'blog/ArbitralAward/" id="footerBlog5">Arbitral Award Recognition &amp; Enforcement</a></li>' +
             '<li><a href="' + base + 'blog/CompanyReliability/" id="footerBlog4">How to Check if a Georgian Company is Reliable</a></li>' +
             '<li><a href="' + base + 'blog/DebtRecoveryAndLoans/" id="footerBlog3">Debt Recovery &amp; Business Loans</a></li>' +
