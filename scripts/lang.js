@@ -285,6 +285,8 @@ function applyText(languageData) {
   if (footerPrivacyPolicy) footerPrivacyPolicy.textContent = languageData.footerPrivacyPolicy;
   const footerCookiePolicy = document.querySelector("#footerCookiePolicy");
   if (footerCookiePolicy) footerCookiePolicy.textContent = languageData.footerCookiePolicy;
+  const footerBlogAll = document.querySelector("#footerBlogAll");
+  if (footerBlogAll) footerBlogAll.textContent = languageData.footerBlogAll;
   const footerBlog1 = document.querySelector("#footerBlog1");
   if (footerBlog1) footerBlog1.textContent = languageData.footerBlog1;
   const footerBlog2 = document.querySelector("#footerBlog2");
