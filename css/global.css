@@ -1,3 +1,12 @@
+/* ================================================================
+   LBP — site stylesheet
+
+   This file is the source and is edited by hand; there is no build
+   step. The old styles/*.scss tree had drifted years behind it (no
+   design tokens, none of the current components) and compiling it
+   would have overwritten this file, so it was removed.
+   ================================================================ */
+
 /* ===== CSS CUSTOM PROPERTIES ===== */
 :root {
   --color-primary: #0d1b2a;
