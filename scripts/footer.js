@@ -30,12 +30,13 @@
         '<div class="footer-col">' +
           '<h4 class="footer-heading" id="footerBlogHeading">Publications</h4>' +
           '<ul class="footer-links">' +
-            '<li><a href="' + base + 'blog/CompanyForms/" id="footerBlog6">The Main Forms of a Company in Georgia</a></li>' +
-            '<li><a href="' + base + 'blog/ArbitralAward/" id="footerBlog5">Arbitral Award Recognition &amp; Enforcement</a></li>' +
-            '<li><a href="' + base + 'blog/CompanyReliability/" id="footerBlog4">How to Check if a Georgian Company is Reliable</a></li>' +
-            '<li><a href="' + base + 'blog/DebtRecoveryAndLoans/" id="footerBlog3">Debt Recovery &amp; Business Loans</a></li>' +
-            '<li><a href="' + base + 'blog/LabourRegulation/" id="footerBlog2">Labour Regulation</a></li>' +
-            '<li><a href="' + base + 'blog/" id="footerBlog1">Virtual Assets in Georgia</a></li>' +
+            '<li><a href="' + base + 'blog/UnsignedContract/" id="footerBlog1">No One Signed the Contract</a></li>' +
+            '<li><a href="' + base + 'blog/CryptoExchangeLicence/" id="footerBlog2">Cryptocurrency Exchange Loses Its License</a></li>' +
+            '<li><a href="' + base + 'blog/ForeignBranchRegistration/" id="footerBlog3">Registration of a Foreign Company&#39;s Branch in Georgia</a></li>' +
+            '<li><a href="' + base + 'blog/TaxInspection/" id="footerBlog4">A Tax Inspector Is at the Company</a></li>' +
+            '<li><a href="' + base + 'blog/InsolvencyProcedure/" id="footerBlog5">Insolvency (Bankruptcy) Procedure in Georgia</a></li>' +
+            '<li><a href="' + base + 'blog/ClientDatabaseTheft/" id="footerBlog6">An Employee Took the Client Base to a Competitor</a></li>' +
+            '<li><a href="' + base + 'blog/" id="footerBlogAll">All publications</a></li>' +
           '</ul>' +
         '</div>' +
         '<div class="footer-col">' +
