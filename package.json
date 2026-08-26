@@ -10,7 +10,6 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "qrcode": "^1.5.4",
-    "sass": "^1.80.6"
+    "qrcode": "^1.5.4"
   }
 }
