@@ -56,8 +56,11 @@
       : parseInt(p[2], 10) + " " + month + " " + p[0];
   }
 
+  // escapes quotes too, so the same helper is safe in attribute position
   function esc(s) {
-    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    return String(s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   }
 
   function catLabel(key) {
@@ -105,17 +108,17 @@
 
   /* ---------- markup ---------- */
   function rowHTML(p) {
-    return '<a class="post-row" href="' + base + p.slug + '/">' +
+    return '<a class="post-row" href="' + esc(base + p.slug) + '/">' +
       '<div class="post-row-media">' +
-        '<img src="' + p.card + '" alt="' + esc(p[lang].title) + '" loading="lazy" />' +
+        '<img src="' + esc(p.card) + '" alt="' + esc(p[lang].title) + '" loading="lazy" />' +
       "</div>" +
       '<div class="post-row-body">' +
         '<div class="post-kicker">' +
           "<span>" + esc(catLabel(p.cat)) + "</span>" +
           '<span class="dot">·</span>' +
-          '<time class="kicker-muted" datetime="' + p.date + '">' + fmtDate(p.date) + "</time>" +
+          '<time class="kicker-muted" datetime="' + esc(p.date) + '">' + esc(fmtDate(p.date)) + "</time>" +
           '<span class="dot">·</span>' +
-          '<span class="kicker-muted">' + p.read + " " + T.min + "</span>" +
+          '<span class="kicker-muted">' + esc(p.read) + " " + T.min + "</span>" +
         "</div>" +
         '<h2 class="post-row-title">' + esc(p[lang].title) + "</h2>" +
         '<p class="post-row-excerpt">' + esc(p[lang].excerpt) + "</p>" +
@@ -143,7 +146,7 @@
       var n = window.BLOG_POSTS.filter(function (p) { return p.cat === c.key; }).length;
       if (!n) return;
       html += '<button class="blog-chip' + (state.cat === c.key ? " active" : "") +
-        '" data-cat="' + c.key + '">' + esc(c[lang]) + "</button>";
+        '" data-cat="' + esc(c.key) + '">' + esc(c[lang]) + "</button>";
     });
     filtersBox.innerHTML = html;
   }
