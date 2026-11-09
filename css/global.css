@@ -3804,7 +3804,7 @@ html[data-splash="show"] body { overflow: hidden; }
 
 /* back-to-top sits above the button and steps aside while the menu is open */
 .back-to-top {
-  bottom: 100px;
+  bottom: 164px; /* above contact FAB + callback button */
 }
 
 body.contact-fab-open .back-to-top {
@@ -3839,6 +3839,6 @@ body.contact-fab-open .back-to-top {
   }
 
   .back-to-top {
-    bottom: 82px;
+    bottom: 136px;
   }
 }

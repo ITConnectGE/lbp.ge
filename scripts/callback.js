@@ -174,17 +174,19 @@
 
   /* ---------------------------------------------------------------- styles */
   var css = [
-    ".cb-float{position:fixed;left:32px;bottom:32px;z-index:800}",
-    ".cb-trigger{box-sizing:border-box;display:inline-flex;align-items:center;align-self:flex-start;height:52px;min-width:52px;",
+    /* Right column, centred above the contact FAB (56px at right:28px/bottom:28px) */
+    ".cb-float{position:fixed;right:30px;bottom:100px;z-index:850;transition:opacity .2s,visibility .2s}",
+    "body.contact-fab-open .cb-float{opacity:0;visibility:hidden}",
+    ".cb-trigger{box-sizing:border-box;display:inline-flex;flex-direction:row-reverse;align-items:center;height:52px;min-width:52px;",
     "padding:0 14px;border-radius:26px;overflow:hidden;white-space:nowrap;background:var(--color-primary,#0d1b2a);color:#fff;",
     "border:1px solid var(--color-accent,#b08d57);font-family:var(--font-body,Montserrat,sans-serif);font-size:.85rem;",
     "font-weight:600;letter-spacing:.03em;cursor:pointer;box-shadow:var(--shadow-md,0 4px 12px rgba(0,0,0,.2));",
     "transition:background .25s,box-shadow .25s}",
     ".cb-trigger svg{width:22px;height:22px;flex:none;color:var(--color-accent,#b08d57)}",
-    ".cb-trigger span{max-width:0;opacity:0;margin-left:0;transition:max-width .35s ease,opacity .25s ease,margin-left .35s ease}",
+    ".cb-trigger span{max-width:0;opacity:0;margin-right:0;transition:max-width .35s ease,opacity .25s ease,margin-right .35s ease}",
     ".cb-trigger:hover,.cb-trigger:focus-visible{background:var(--color-primary-light,#1b2d44);box-shadow:var(--shadow-lg,0 8px 30px rgba(0,0,0,.25))}",
-    ".cb-trigger:hover span,.cb-trigger:focus-visible span{max-width:240px;opacity:1;margin-left:10px;margin-right:6px}",
-    "@media (max-width:850px){.cb-float{left:20px;bottom:20px}.cb-trigger{height:44px;min-width:44px;padding:0 10px}}",
+    ".cb-trigger:hover span,.cb-trigger:focus-visible span{max-width:240px;opacity:1;margin-right:10px;margin-left:6px}",
+    "@media (max-width:850px){.cb-float{right:20px;bottom:80px}.cb-trigger{height:44px;min-width:44px;padding:0 10px}}",
     "@media (hover:none){.cb-trigger span{display:none}}",
 
     ".cb-overlay{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.6);display:flex;justify-content:center;padding:28px 16px;",
@@ -355,21 +357,16 @@
   trigger.setAttribute("aria-label", t.trigger);
   trigger.innerHTML =
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-      '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>' +
+      '<path d="M3 18v-6a9 9 0 0 1 18 0v6"/>' +
+      '<path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>' +
     "</svg><span>" + t.trigger + "</span>";
 
   function mount() {
     document.body.appendChild(overlay);
-    // Sit under the WhatsApp / Telegram / Signal stack when the page has it
-    var stack = document.querySelector(".floating-contacts");
-    if (stack) {
-      stack.appendChild(trigger);
-    } else {
-      var wrap = document.createElement("div");
-      wrap.className = "cb-float";
-      wrap.appendChild(trigger);
-      document.body.appendChild(wrap);
-    }
+    var wrap = document.createElement("div");
+    wrap.className = "cb-float";
+    wrap.appendChild(trigger);
+    document.body.appendChild(wrap);
   }
   if (document.body) mount();
   else document.addEventListener("DOMContentLoaded", mount);
