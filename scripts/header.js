@@ -148,6 +148,14 @@
     });
   });
 
+  // Callback Request modal (floating button + [data-callback] triggers)
+  if (!document.querySelector('script[src="/scripts/callback.js"]')) {
+    var cb = document.createElement("script");
+    cb.src = "/scripts/callback.js";
+    cb.defer = true;
+    document.body.appendChild(cb);
+  }
+
   // click outside closes dropdowns
   document.addEventListener("click", function () {
     document.querySelectorAll(".has-dropdown.open").forEach(function (el) {
