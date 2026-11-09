@@ -16,6 +16,13 @@
       splash.parentNode.removeChild(splash);
       return;
     }
+    // Reveal the video only once real frames are playing
+    var video = splash.querySelector("video");
+    if (video) {
+      var reveal = function () { video.classList.add("is-playing"); };
+      if (!video.paused && video.readyState >= 3) reveal();
+      else video.addEventListener("playing", reveal, { once: true });
+    }
     setTimeout(function () {
       splash.classList.add("hidden");
       setTimeout(function () {
